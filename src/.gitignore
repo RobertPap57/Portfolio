@@ -1,0 +1,20 @@
+# Compiled output
+/dist
+/out-tsc
+
+# Dependency directories
+/node_modules
+
+# Environment files (security reasons, contains sensitive data)
+/src/environments/environment*.ts
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Angular cache
+.angular/cache
