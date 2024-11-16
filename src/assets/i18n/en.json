@@ -1,0 +1,26 @@
+{
+    "HEADER": {
+        "NAV_LINKS": [
+            "About me",
+            "Skills",
+            "Projects"
+        ]
+    },
+    "ATF": {
+        "TITLE": "Frontend developer",
+        "BUTTON_1": {
+            "TEXT": "Check my work",
+            "WIDTH": "172px"
+        },
+        "BUTTON_2": {
+            "TEXT": "Contact me",
+            "WIDTH": "143px"
+        },
+        "MARQUEE": [
+            "Available for remote work",
+            "Frontend Developer",
+            "Based near Freiburg im Breisgau",
+            "Open to work"
+        ]
+    }
+}

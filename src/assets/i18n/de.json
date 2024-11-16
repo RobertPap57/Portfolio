@@ -1,0 +1,26 @@
+{
+    "HEADER": {
+        "NAV_LINKS": [
+            "Über mich",
+            "Fähigkeiten",
+            "Projekte"
+        ]
+    },
+    "ATF": {
+        "TITLE": "Frontend-Entwickler",
+        "BUTTON_1": {
+            "TEXT": "Meine Arbeit ansehen",
+            "WIDTH": "226px"
+        },
+        "BUTTON_2": {
+            "TEXT": "Kontaktieren Sie mich",
+            "WIDTH": "231px"
+        },
+        "MARQUEE": [
+            "Verfügbar für Remote-Arbeit",
+            "Frontend-Entwickler",
+            "In der Nähe von Freiburg im Breisgau",
+            "Bereit für neue Herausforderungen"
+        ]
+    }
+}

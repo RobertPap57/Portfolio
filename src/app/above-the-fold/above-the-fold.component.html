@@ -1,0 +1,26 @@
+<div class="banner-container">
+    <div class="title">
+        <h2>{{'ATF.TITLE' | translate}}</h2>
+        <div>
+            <h1>Robert Pap</h1>
+            <div class="main-buttons">
+                <a [ngStyle]="{ width: ('ATF.BUTTON_1.WIDTH' | translate) }" href="#projects">
+                    <app-animated-button>{{ 'ATF.BUTTON_1.TEXT' | translate }}</app-animated-button>
+                </a>
+                <a [ngStyle]="{ width: ('ATF.BUTTON_2.WIDTH' | translate) }" href="#contact">
+                    <app-animated-button>{{ 'ATF.BUTTON_2.TEXT' | translate }}</app-animated-button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="marquee">
+        <div class="marquee-content">
+            <div *ngFor="let item of [1, 2]">
+                <p *ngFor="let item of marqueeContent">
+                    <img src="../assets/images/dot.svg" alt="">
+                    {{item}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

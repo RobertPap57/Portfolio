@@ -1,0 +1,102 @@
+@import '../shared/_mixins.scss';
+
+
+@keyframes slideLeftMarquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.banner-container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../assets/images/above_the_fold.svg');
+    background-size: cover;
+    background-position: center;
+    @include d-flex-column();
+    position: relative;
+    overflow-x: hidden;
+}
+
+.title {
+    @include d-flex-column();
+    gap: 12px;
+
+    h2 {
+        font-size: 40px;
+        color: #D9D9D9;
+    }
+
+    h1 {
+        font-size: 128px;
+        font-family: "Host Grotesk" !important;
+        color: #D9D9D9;
+        letter-spacing: 6px;
+    }
+
+    div {
+        @include d-flex-column();
+        gap: 40px;
+    }
+
+    .main-buttons {
+        @include d-flex-row();
+        gap: 48px;
+
+    }
+}
+
+
+
+
+.marquee {
+    width: calc(100% + 20px);
+    height: 62px;
+    transform: rotateZ(-3deg);
+    background-color: #FFFFFF1F;
+    backdrop-filter: blur(5.3px);
+    position: absolute;
+    bottom: 60px;
+    padding: 12px 32px;
+    overflow: hidden;
+
+
+
+    .marquee-content {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        height: 62px;
+
+        div {
+            display: inline-block;
+            white-space: nowrap;
+            animation: slideLeftMarquee 30s linear infinite;
+
+            p {
+                font-family: "Karla";
+                font-size: 32px;
+                color: #3DCFB6;
+                display: inline-block;
+                margin-left: 56px;
+                white-space: nowrap;
+
+                img {
+                    width: 6.4px;
+                    margin-right: 56px;
+                    padding-block: 7.5px;
+
+
+                }
+
+            }
+        }
+    }
+
+
+
+}

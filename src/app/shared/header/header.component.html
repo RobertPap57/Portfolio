@@ -1,0 +1,21 @@
+<div class="header-container">
+    <nav>
+        <label class="switch">
+            <div class="options">
+                <p [class.selected]="toggleState === false">EN</p>
+                <p [class.selected]="toggleState === true">DE</p>
+            </div>
+            <input type="checkbox" [(ngModel)]="toggleState" (change)="switchLanguage(toggleState ? 'de' : 'en')">
+            <span class="slider"></span>
+        </label>
+        <a (click)="activeLink = i + 1" [class.link-selected]="activeLink === i + 1"
+            *ngFor="let link of navLinks; let i = index" href="#">{{link}}
+            <img src="assets/images/dot.svg" alt="">
+        </a>
+    </nav>
+
+    <div class="logo-container">
+        <img src="assets/images/logo.png" alt="">
+    </div>
+
+</div>
