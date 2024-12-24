@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { AnimatedButtonComponent } from '../shared/animated-button/animated-button.component';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from "@ngx-translate/core";
 
 @Component({
@@ -25,7 +25,7 @@ constructor(public translate: TranslateService) {
 
 
 private translateMarqueeContent() {
-  this.translate.get('ATF.MARQUEE').subscribe((content: string[]) => {
+  this.translate.get('atf.marquee').subscribe((content: string[]) => {
     this.marqueeContent = content.concat(content);
   });
 }

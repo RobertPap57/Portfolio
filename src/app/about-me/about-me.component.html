@@ -1,0 +1,23 @@
+<div class="about-me-section" id="about-me">
+    <div class="my-photo-container">
+        <img [class.photo-hovered]="isHovered === true" class="my-photo-hover"
+            src="../assets/images/about-me/my_photo_hover.svg" alt="">
+        <img (mouseenter)="isHovered = true" class="my-photo" src="../assets/images/about-me/me-test.png" alt="">
+    </div>
+    <div class="about-me-container">
+        <h2>{{'aboutMe.tagLine' | translate}}</h2>
+        <div class="text-box">
+            <h1>{{'aboutMe.title' | translate}}</h1>
+            <div>
+                <p>{{'aboutMe.introLine' | translate}}</p>
+                <div>
+                    <div *ngFor="let line of aboutMeContent; let i = index">
+                        <img [src]="'../assets/images/about-me/' + contentIcons[i] + '.svg'" alt="">
+                        <p>{{line}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

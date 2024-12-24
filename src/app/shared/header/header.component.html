@@ -1,21 +1,29 @@
-<div class="header-container">
-    <nav>
-        <label class="switch">
-            <div class="options">
-                <p [class.selected]="toggleState === false">EN</p>
-                <p [class.selected]="toggleState === true">DE</p>
-            </div>
-            <input type="checkbox" [(ngModel)]="toggleState" (change)="switchLanguage(toggleState ? 'de' : 'en')">
-            <span class="slider"></span>
-        </label>
-        <a (click)="activeLink = i + 1" [class.link-selected]="activeLink === i + 1"
-            *ngFor="let link of navLinks; let i = index" href="#">{{link}}
-            <img src="assets/images/dot.svg" alt="">
+<header>
+    <div class="header-container">
+        <nav class="nav-mobile" [class.active]="menuOpen">
+            <label class="switch">
+                <div class="options">
+                    <p [class.selected]="toggleState === false">EN</p>
+                    <p [class.selected]="toggleState === true">DE</p>
+                </div>
+                <input type="checkbox" [(ngModel)]="toggleState" (change)="switchLanguage(toggleState ? 'de' : 'en')">
+                <span class="slider"></span>
+            </label>
+            <a (click)="selectLink(i)" [class.link-selected]="activeLink === i + 1"
+                *ngFor="let link of navLinks; let i = index" [href]="'#' + linkIds[i]">{{link}}
+                <span></span>
+            </a>
+        </nav>
+    
+        <a href="#atf" class="logo-container">
+            <img src="" alt="">
         </a>
-    </nav>
 
-    <div class="logo-container">
-        <img src="assets/images/logo.png" alt="">
+        <div class="burger-menu hide-desktop" [class.active]="menuOpen" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-
-</div>
+    <div class="layout" *ngIf="menuOpen" (click)="closeMenu()" [class.active]="menuOpen"></div>
+</header>

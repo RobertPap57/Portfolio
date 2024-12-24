@@ -1,29 +1,5 @@
 @import '../_mixins.scss';
-
 div {
-    border: 1px solid #ffffff;
-    border-radius: 100px;
-    overflow: hidden;
-    height: 48px;
-    width: 100%;
-    @include d-flex-row();
-
-    &:hover {
-        border: 1px solid #3DCFB6;
-        cursor: pointer;
-
-        p {
-            color: #3DCFB6;
-        }
-    }
-
-    p {
-        font-family: 'Karla';
-        font-size: 18px;
-        color: #ffffff;
-        white-space: nowrap;
-        padding: 13px 24px;
-        transition: transform 0s linear 0s;
-
-    }
+    @include button();
 }
+

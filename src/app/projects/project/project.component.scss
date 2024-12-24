@@ -1,0 +1,327 @@
+@import '../../shared/_mixins.scss';
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 19;
+}
+
+.project-container {
+    @include d-flex($gap: 88px, $al: center, $jus: center);
+    @include scroll-bar();
+    position: fixed;
+    height: 656px;
+    width: 1248px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    border: 1px solid #3DCFB6;
+    background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+    overflow-y: auto;
+}
+
+.content {
+    @include d-flex($dir: column, $gap: 40px);
+    width: 480px;
+}
+
+.title {
+    @include d-flex($dir: column, $gap: 24px);
+
+    h2 {
+        font-size: 128px;
+        font-weight: 700;
+        line-height: 100px;
+    }
+
+    h1 {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 52px;
+        color: white;
+        letter-spacing: -3px;
+    }
+}
+
+.description {
+    @include d-flex($dir: column, $gap: 32px);
+
+    div {
+        @include d-flex($dir: column, $gap: 20px);
+
+        h1 {
+            font-size: 24px;
+            line-height: normal;
+        }
+    }
+
+    .technologies {
+        @include d-flex($gap: 16px);
+
+        div {
+            @include d-flex($gap: 4px, $al: center);
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.buttons {
+    @include d-flex($gap: 32px);
+    position: relative;
+
+    a {
+        @include button();
+        gap: 6px;
+
+        &:hover {
+            span img {
+                transform: translate(4px, -2px);
+            }
+          
+        }
+      
+        p {
+            transition: all 125ms ease-in-out;
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            img {
+                transition: all 125ms ease-in-out;
+                cursor: pointer;
+            }
+        }
+        &.disabled {
+            pointer-events: none;
+            span {
+                img {
+                    filter: hue-rotate(180deg) saturate(0%) brightness(100%);
+                }
+            }
+            &:hover {
+                span img {
+                    transform: none;
+                }
+              
+            } 
+        }
+    }
+
+}
+.button-wrapper {
+    &:hover ~.project-in-work {
+        display: flex !important;
+    } 
+}
+
+.project-in-work {
+    height: auto;
+    display: none;
+    position: absolute;
+    gap: 16px;
+    top: -136px;
+    width: 310px;
+    left: 0;
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+    
+    p {
+        font-size: 16px;
+        font-family: "Karla";
+        color: #3DCFB6;
+    }
+    .pointer {
+        position: absolute;
+        bottom: -14px;
+        left: 40px;
+        filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+    }
+    .in-work-img {
+        width: 76px;
+
+    }
+
+}
+
+
+.project-img {
+    width: 520px;
+    height: 370px;
+    align-self: center;
+    border-radius: 30px;
+}
+
+.close-btn {
+    position: absolute;
+    @include d-flex($al: center, $jus: center);
+    height: 48px;
+    width: 48px;
+    top: 56px;
+    right: 80px;
+    cursor: pointer;
+
+    &:hover {
+        img {
+            content: url('../../../assets/images/projects/close_hover.svg');
+            height: 25px;
+            width: 25px;
+        }
+    }
+
+    img {
+        transition: all 125ms ease-in-out;
+        content: url('../../../assets/images/projects/close.svg');
+        height: 18px;
+        width: 18px;
+        cursor: pointer;
+    }
+}
+
+
+.next-project {
+    position: absolute;
+    @include d-flex($al: center, $jus: center, $gap: 12px);
+    height: 48px;
+    bottom: 55px;
+    right: 95px;
+    cursor: pointer;
+
+    p,
+    img {
+        cursor: pointer;
+        color: #3DCFB6;
+        transition: all 125ms ease-in-out;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.2) translateX(4px);
+        }
+
+        p {
+            color: white;
+        }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .project-container {
+        @include d-flex($dir: column-reverse, $al: center, $jus: flex-start, $gap: 40px);
+        width: auto;
+        height: auto;
+        max-height: 95vh;
+        padding: 40px;
+
+        .next-project,
+        .close-btn {
+            position: static;
+            align-self: flex-end;
+        }
+
+        .next-project {
+            padding-right: 20px;
+        }
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .description {
+        p {
+            font-size: 18px;
+        }
+    }
+    .next-project {
+        p{
+            font-size: 18px !important;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .project-container {
+        gap: 40px;
+        width: 90vw;
+        height: auto;
+        max-height: 95vh;
+
+        .content {
+            width: 100%;
+            gap: 32px;
+            .title{
+                gap: 8px;
+                h2{
+                    font-size: 72px;
+                    line-height: 72px;
+                }
+                h1 {
+                    font-size: 56px;
+                    line-height: 45px;
+                }
+            }
+            .description {
+                gap: 20px;
+                div {
+                    gap: 16px;
+                    h1 {
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                .technologies{
+                    flex-wrap: wrap;
+                    div {
+                        gap:4px;
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            .buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+
+        .project-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 435px) {
+    .project-in-work {
+       @include d-flex($dir: column, $al: center, $jus: center, $gap: 8px);
+       width: 100%;
+       top: auto;
+       bottom: 152px;
+    }
+}

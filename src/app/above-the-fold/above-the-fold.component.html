@@ -1,25 +1,57 @@
-<div class="banner-container">
-    <div class="title">
-        <h2>{{'ATF.TITLE' | translate}}</h2>
-        <div>
-            <h1>Robert Pap</h1>
-            <div class="main-buttons">
-                <a [ngStyle]="{ width: ('ATF.BUTTON_1.WIDTH' | translate) }" href="#projects">
-                    <app-animated-button>{{ 'ATF.BUTTON_1.TEXT' | translate }}</app-animated-button>
-                </a>
-                <a [ngStyle]="{ width: ('ATF.BUTTON_2.WIDTH' | translate) }" href="#contact">
-                    <app-animated-button>{{ 'ATF.BUTTON_2.TEXT' | translate }}</app-animated-button>
-                </a>
+<div class="background-img">
+
+    <div class="atf-section" id="atf">
+        <div class="title">
+            <h3>{{ 'atf.title' | translate }}</h3>
+            <div>
+                <h1>Robert Pap</h1>
+                <div class="main-buttons">
+                    <a href="#projects">
+                        <app-animated-button>{{ 'atf.button1' | translate }}</app-animated-button>
+                    </a>
+                    <a href="#contact">
+                        <app-animated-button>{{ 'atf.button2' | translate }}</app-animated-button>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="marquee">
-        <div class="marquee-content">
-            <div *ngFor="let item of [1, 2]">
-                <p *ngFor="let item of marqueeContent">
-                    <img src="../assets/images/dot.svg" alt="">
-                    {{item}}
-                </p>
+
+        <div class="left-lateral">
+            <div>
+                <img src="../assets/images/above-the-fold/arrow_down.svg" alt="">
+            </div>
+            <div></div>
+        </div>
+
+        <div class="right-lateral">
+            <div class="email  hide-email-desktop">
+                <a href="mailto:info&#64;robert-pap.de">info&#64;robert-pap.de</a>
+            </div>
+            <div class="socials">
+                <a class="hide-email-mobile" href="mailto:info&#64;robert-pap.de">
+                    <img src="../assets/images/above-the-fold/mail.svg" alt="">
+                </a>
+                <a href="https://github.com/RobertPap57" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/images/above-the-fold/github.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="../assets/images/above-the-fold/linkedin.svg" alt="">
+                </a>
+            </div>
+            <div></div>
+        </div>
+
+
+
+
+        <div class="marquee">
+            <div class="marquee-content">
+                <div *ngFor="let item of [1, 2]">
+                    <p *ngFor="let item of marqueeContent">
+                        <span></span>
+                        {{item}}
+                    </p>
+                </div>
             </div>
         </div>
     </div>

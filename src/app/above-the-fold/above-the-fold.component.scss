@@ -11,45 +11,180 @@
     }
 }
 
-.banner-container {
-    height: 100vh;
-    width: 100vw;
-    background-image: url('../../assets/images/above_the_fold.svg');
-    background-size: cover;
-    background-position: center;
-    @include d-flex-column();
-    position: relative;
-    overflow-x: hidden;
+
+@keyframes bounceArrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.title {
-    @include d-flex-column();
-    gap: 12px;
 
-    h2 {
+.background-img {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+}
+
+.atf-section {
+    height: 100vh;
+    width: 100%;
+    @include d-flex($dir: column, $al: center, $jus: center);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.title {
+    @include d-flex($dir: column, $al: center, $jus: center, $gap: 12px);
+    z-index: 2;
+
+    h3 {
+        font-family: 'Fira Code';
+        font-weight: 400;
         font-size: 40px;
         color: #D9D9D9;
+        line-height: 40px;
     }
 
     h1 {
+        // font-family: "Host Grotesk";
+        font-family: "Karla";
         font-size: 128px;
-        font-family: "Host Grotesk" !important;
         color: #D9D9D9;
-        letter-spacing: 6px;
+        font-weight: 700;
+        letter-spacing: -2px;
+        line-height: 128px;
+        text-align: center;
     }
 
     div {
-        @include d-flex-column();
-        gap: 40px;
+        @include d-flex($dir: column, $al: center, $jus: center, $gap: 40px);
     }
 
     .main-buttons {
-        @include d-flex-row();
-        gap: 48px;
-
+        @include d-flex($al: center, $jus: center, $gap: 48px);
     }
 }
 
+
+.left-lateral {
+    width: 30px;
+    height: 312px;
+    position: absolute;
+    bottom: 0;
+    left: 96px;
+    @include d-flex($dir: column, $al: center, $jus: center, $gap: 24px);
+    z-index: 2;
+
+    div:nth-child(1) {
+        width: 100%;
+        height: 48px;
+        border: 1px solid #3DCFB6;
+        border-radius: 32px;
+        @include d-flex($al: center, $jus: center);
+
+        img {
+            height: 14px;
+            animation: bounceArrow 1s ease-in-out infinite;
+        }
+    }
+
+    div:nth-child(2) {
+        height: 240px;
+        width: 1px;
+        background-color: #3DCFB6;
+    }
+}
+
+
+.right-lateral {
+    width: 32px;
+    position: absolute;
+    bottom: 0;
+    right: 96px;
+    @include d-flex($dir: column, $al: center, $jus: center, $gap: 24px);
+    z-index: 2;
+
+    div:nth-child(3) {
+        height: 186px;
+        width: 1px;
+        background-color: #FFFFFF;
+    }
+}
+
+
+.email {
+    height: 159px;
+
+    a {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        transform: rotateZ(-180deg);
+
+
+        &:hover {
+            color: #3DCFB6;
+        }
+    }
+}
+
+
+.socials {
+    width: 32px;
+    @include d-flex($dir: column, $al: center, $jus: center, $gap: 12px);
+
+    a {
+        position: relative;
+        width: 32px;
+        height: 32px;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+        }
+    }
+
+    a:nth-last-child(3) {
+        img {
+            content: url('../../assets/images/above-the-fold/mail.svg');
+
+            &:hover {
+                content: url('../../assets/images/above-the-fold/mail_hover.svg');
+            }
+        }
+    }
+
+    a:nth-last-child(2) {
+        img {
+            content: url('../../assets/images/above-the-fold/github.svg');
+
+            &:hover {
+                content: url('../../assets/images/above-the-fold/github_hover.svg');
+            }
+        }
+    }
+
+    a:nth-last-child(1) {
+        img {
+            content: url('../../assets/images/above-the-fold/linkedin.svg');
+
+            &:hover {
+                content: url('../../assets/images/above-the-fold/linkedin_hover.svg');
+            }
+        }
+    }
+
+}
 
 
 
@@ -58,45 +193,128 @@
     height: 62px;
     transform: rotateZ(-3deg);
     background-color: #FFFFFF1F;
-    backdrop-filter: blur(5.3px);
     position: absolute;
     bottom: 60px;
     padding: 12px 32px;
     overflow: hidden;
-
+    backdrop-filter: blur(3.3px);
+    z-index: 3;
 
 
     .marquee-content {
         overflow: hidden;
         white-space: nowrap;
         width: 100%;
-        height: 62px;
+        height: 100%;
 
         div {
             display: inline-block;
             white-space: nowrap;
+            will-change: transform;
             animation: slideLeftMarquee 30s linear infinite;
 
             p {
-                font-family: "Karla";
                 font-size: 32px;
                 color: #3DCFB6;
                 display: inline-block;
                 margin-left: 56px;
                 white-space: nowrap;
 
-                img {
+                span {
                     width: 6.4px;
+                    height: 6.4px;
+                    background-color: #3DCFB6;
+                    border-radius: 50%;
+                    display: inline-block;
+                    white-space: nowrap;
                     margin-right: 56px;
-                    padding-block: 7.5px;
-
-
+                    margin-bottom: 6px;
                 }
-
             }
         }
     }
+}
 
 
 
+@media (min-width: 1920px) {
+    .atf-section {
+        width: 1920px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hide-email-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    .hide-email-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-buttons {
+        flex-wrap: wrap;
+    }
+
+    .title {
+        h3 {
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        h1 {
+            font-size: 62px;
+            line-height: 62px;
+        }
+    }
+
+    .left-lateral {
+        left: 16px;
+        height: 296px;
+    }
+
+    .right-lateral {
+        right: 16px;
+
+        div:nth-child(3) {
+            height: 112px;
+
+        }
+    }
+
+    .marquee {
+        height: 53px;
+        bottom: 30px;
+
+        .marquee-content {
+            p {
+                font-size: 24px !important;
+                margin-left: 40px !important;
+            }
+
+            span {
+                margin-right: 40px !important;
+                margin-bottom: 4px !important;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 390px) {
+    .title {
+        div {
+            .main-buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+        }
+    }
 }

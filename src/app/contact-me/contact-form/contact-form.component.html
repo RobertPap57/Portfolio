@@ -1,0 +1,61 @@
+<form class="form-container" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <div class="inputs-container">
+    <div>
+      <label for="name">{{ 'contactForm.name.label' | translate }}</label>
+      <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="userName" autocomplete="off"
+      [ngClass]="{'input-invalid': name.invalid && name.touched}"
+      [placeholder]="name.invalid && name.touched ? ('contactForm.name.required' | translate) : ('contactForm.name.placeholder' | translate)"
+      minlength="4" maxlength="40" pattern="^[a-zA-Z ]+$" required >
+         @if (!name.valid && name.touched && name.value) {
+          <span class="required-msg">{{ 'contactForm.name.nameInvalid' | translate }}</span>
+          }
+    </div>
+    <div>
+      <label for="email">{{ 'contactForm.email.label' | translate}}</label>
+      <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" autocomplete="off"
+      [ngClass]="{'input-invalid': email.invalid && email.touched}"
+      [placeholder]="email.invalid && email.touched ? ('contactForm.email.required' | translate) : ('contactForm.email.placeholder' | translate)"
+        minlength="4" maxlength="40" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+        @if (!email.valid && email.touched && email.value) {
+          <span class="required-msg">{{ 'contactForm.email.emailInvalid' | translate }}</span>
+          }
+    </div>
+    <div>
+      <label for="message">{{ 'contactForm.message.label' | translate}}</label> 
+      <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+      [ngClass]="{'input-invalid': message.invalid && message.touched}"
+      [placeholder]="message.invalid && message.touched ? ('contactForm.message.required' | translate) : ('contactForm.message.placeholder' | translate)"
+       rows="1" minlength="10" maxlength="1000" required></textarea>
+       @if (!message.valid && message.touched && message.value) {
+        <span class="required-msg">{{ 'contactForm.message.messageInvalid' | translate }}</span>
+        }
+    </div>
+  </div>
+  <div class="action-container">
+    <div class="policy-agreement">
+      <div class="checkbox-container">
+        <input type="checkbox" id="policyAgreement" name="policyAgreement" [(ngModel)]="isChecked" required>
+        <p>{{ 'contactForm.policyAgreement.label1/2' | translate }}
+          <a href="/privacy-policy">{{ 'contactForm.policyAgreement.link' | translate }}</a>
+          {{ 'contactForm.policyAgreement.label2/2' | translate }}
+        </p>
+      </div>
+      <p class="policy-required-msg" [style.opacity]="isChecked || !formSubmitted ? '0' : '1'">
+        {{ 'contactForm.policyAgreement.required' | translate }}</p>
+    </div>
+    <div class="button-container">
+      <button type="submit" value="Submit">
+        <app-animated-button [disabled]="!isChecked || !contactForm.valid">{{ 'contactForm.button' | translate }}</app-animated-button>
+      </button>
+    </div>
+    @if(emailSent) {
+      <div class="email-sent">
+        <p>{{ 'contactForm.emailSent' | translate }}</p>
+        <div>
+          <span></span>
+          <p>Robert Pap</p>
+        </div>
+      </div>
+    }
+  </div>
+</form>

@@ -1,36 +1,39 @@
 @import '../_mixins.scss';
 
-.header-container {
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    font-size: 20px;
-    width: 100%;
-    height: 98px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 96px;
-    color: white;
+header {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+    z-index: 21;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.header-container {
+    @include d-flex($al: center, $jus: space-between);
+    padding-inline: 96px;
+    height: 98px;
 
     nav {
-        display: flex;
-        gap: 24px;
+        @include d-flex($gap: 24px);
 
         a {
             position: relative;
-            color: white;
+            font-family: 'Fira Code';
+            font-size: 20px;
 
-            img {
+            span {
+                background-color: #3DCFB6;
                 display: none;
                 position: absolute;
-                bottom: -6px;
-                left: calc(50% - 6px);
+                height: 6.4px;
+                width: 6.4px;
+                border-radius: 30px;
+                bottom: -8px;
+                left: calc(50% - 3.8px);
             }
 
             &:hover {
-                img {
+                span {
                     display: block
                 }
             }
@@ -43,7 +46,7 @@
 .link-selected {
     color: #3DCFB6 !important;
 
-    img {
+    span {
         display: block !important;
     }
 }
@@ -54,16 +57,18 @@
     display: inline-block;
     width: 84px;
     height: 28px;
+    cursor: pointer;
+
 
     input {
         opacity: 0;
         width: 0;
         height: 0;
+
     }
 
     span {
         position: absolute;
-        cursor: pointer;
         width: 84px;
         height: 28px;
         top: 0;
@@ -74,6 +79,7 @@
         transition: .125s;
         border-radius: 100px;
         border: 1px solid #3DCFB6;
+
 
         &:hover {
             border: 1px solid white;
@@ -103,14 +109,13 @@
 
 .options {
     position: absolute;
-    @include d-flex-row();
+    @include d-flex($al: center, $jus: center);
     width: 84px;
     height: 28px;
     top: 0;
     left: -1px;
     border-radius: 100px;
     z-index: 2;
-    cursor: pointer;
 
     &:hover~span {
         border: 1px solid white !important;
@@ -122,31 +127,129 @@
 
     p {
         font-size: 16px;
+        font-family: 'Fira Code';
         padding-inline: 12px;
         color: #3DCFB680;
+        cursor: pointer;
 
+    }
+    .selected {
+        color: white !important;
+        font-weight: 700 !important;
     }
 }
 
 
-.selected {
-    color: white !important;
-    font-weight: 700 !important;
-}
 
 
 .logo-container {
     height: 100%;
-    @include d-flex-row();
+    @include d-flex($al: center, $jus: center);
 
     img {
         height: 54px;
-        content: url('../../../assets/images/logo.png');
+        content: url('../../../assets/images/shared/logo.png');
 
         &:hover {
-            content: url('../../../assets/images/logo-hover.png');
+            content: url('../../../assets/images/shared/logo_hover.png');
             height: 55px;
             cursor: pointer;
+        }
+    }
+}
+
+.burger-menu {
+    @include d-flex($dir: column, $al: center, $jus: center, $gap: 8px);
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+
+    span {
+        height: 2px;
+        width: 32px;
+        background-color: white;
+        border-radius: 30px;
+        cursor: pointer;
+
+    }
+
+    &.active {
+        span {
+            background-color: #3DCFB6;
+            height: 2.5px;
+            width: 34px;
+        }
+    }
+}
+
+.layout {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    &.active {
+        display: block;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header-container {
+        width: 1920px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 1300px) {
+    .header-container {
+        padding-inline: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background: none;
+    }
+
+    .header-container {
+        padding-inline: 16px;
+        margin-top: 32px;
+        height: 50px;
+        position: relative;
+    }
+
+    .logo-container {
+    
+        img {
+            height: 48px;
+            content: url('../../../assets/images/shared/logo_mobile.png');
+    
+            &:hover {
+                height: 47px;
+                content: url('../../../assets/images/shared/logo_mobile_hover.png');
+                cursor: pointer;
+            }
+        }
+    }
+
+    .nav-mobile {
+        display: none !important;
+        @include text-box();
+        background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+        flex-direction: column-reverse !important;
+        position: absolute;
+        padding: 40px 77px;
+        top: 48px;
+        right: 16px;
+        z-index: 5;
+        &.active {
+            display: flex !important;
+        }
+        a {
+            font-size: 18px !important;
         }
     }
 }

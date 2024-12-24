@@ -15,9 +15,11 @@ import { TranslateService } from "@ngx-translate/core";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  menuOpen: boolean = false;
   toggleState: boolean = false;
   activeLink: number = 0;
   navLinks: string[] = [];
+  linkIds: string[] = ['about-me', 'skills', 'projects'];
 
   constructor(public translate: TranslateService) {
     this.translateNavLinks();
@@ -28,16 +30,31 @@ export class HeaderComponent {
     });
   }
 
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+    if (this.menuOpen) document.documentElement.style.overflowY = 'hidden';
+    this.activeLink = 0;
+  }
 
+  closeMenu(): void {
+    this.menuOpen = false;
+    document.documentElement.style.overflowY = 'auto';
+  }
+
+  selectLink(index: number): void {
+    this.activeLink = index + 1;
+    this.closeMenu(); // Close menu after clicking a link
+  }
 
   switchLanguage(language: string): void {
     this.translate.use(language);
     console.log(language);
+    this.closeMenu();
 
   }
 
   private translateNavLinks() {
-    this.translate.get('HEADER.NAV_LINKS').subscribe((links: string[]) => {
+    this.translate.get('header.navLinks').subscribe((links: string[]) => {
       this.navLinks = links;
     });
   }

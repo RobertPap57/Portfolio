@@ -1,23 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, inject, Signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./shared/header/header.component";
-import { AboveTheFoldComponent } from "./above-the-fold/above-the-fold.component";
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
+import { FooterComponent } from "./shared/footer/footer.component";
+import { HeaderComponent } from "./shared/header/header.component";
+import { CursorShadowComponent } from './shared/cursor-shadow/cursor-shadow.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, AboveTheFoldComponent, TranslateModule],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    TranslateModule,
+    FooterComponent,
+    HeaderComponent,
+    CursorShadowComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 
 export class AppComponent {
-
+ title = 'portfolio';
 
   constructor(public translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);

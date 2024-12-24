@@ -1,0 +1,48 @@
+<div class="background">
+    <div class="skills-section" id="skills">
+        <div class="text-container">
+            <h2>{{'skills.tagLine' | translate}}</h2>
+            <div class="text-box">
+                <h1>{{'skills.title' | translate}}</h1>
+                <div>
+                    <p>{{'skills.content' | translate}}</p>
+                    <div>
+                        <h3>
+                            <span>{{'skills.question1/2' | translate}}</span>
+                            <span>{{'skills.question2/2' | translate}}</span>
+                        </h3>
+                        <p>{{'skills.contactMe' | translate}}</p>
+                    </div>
+                </div>
+                <a href="#contact">
+                    <app-animated-button>{{'skills.button' | translate}}</app-animated-button>
+                </a>
+            </div>
+        </div>
+
+        <div class="skills-container">
+            <div *ngFor="let skill of skills ; let i = index">
+                <img src="../assets/images/skills/icon_{{i+1}}.svg" alt="">
+                <p>{{skill}}</p>
+            </div>
+            <div class="growth">
+                <img src="../assets/images/skills/growth_icon.svg" alt="">
+                <p>Growth mindset</p>
+                <div class="growth-hover">
+                    <img class="pointer" src="../assets/images/skills/tooltip_pointer.svg" alt="">
+                    <p>{{'skills.growth' | translate}}</p>
+                    <div>
+                        <div>
+                            <img src="../assets/images/skills/react.svg" alt="">
+                            <p>React</p>
+                        </div>
+                        <div>
+                            <img src="../assets/images/skills/vuejs.svg" alt="">
+                            <p>Vue Js</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

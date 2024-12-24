@@ -1,0 +1,102 @@
+@import '../shared/_mixins.scss';
+
+.contact-me-section {
+    @include section-padding();
+    @include d-flex($jus: space-evenly);
+    width: 100%;
+    margin-inline: auto;
+    position: relative;
+    z-index: 11;
+    overflow-x: hidden;
+    overflow-y: clip;
+
+}
+
+.text-box {
+    @include d-flex($dir: column, $gap: 40px);
+    width: 568px;
+
+
+    div:nth-child(1) {
+        @include d-flex($dir: column, $gap: 20px);
+
+        h2 {
+            font-weight: 500;
+        }
+    }
+
+    div:nth-child(2) {
+        @include d-flex($dir: column, $gap: 16px);
+
+        h3 {
+            font-family: Fira Code;
+            font-size: 24px;
+            font-weight: 700;
+            color: #3DCFB6;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        div {
+            @include d-flex();
+            flex-wrap: wrap;
+
+            p:nth-child(2) {
+                font-weight: 700;
+                color: #3DCFB6;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1920px) {
+    .contact-me-section {
+        width: 1920px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .contact-me-section {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .text-box {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-me-section {
+        flex-direction: column;
+        gap: 64px;
+        padding: 48px;
+        align-items: center;
+    }
+
+    .text-box {
+        width: auto;
+    }
+
+    app-contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-box {
+        gap: 32px;
+
+        div:nth-child(1) {
+            gap: 16px;
+        }
+
+        h3 {
+            font-size: 20px !important;
+        }
+    }
+}

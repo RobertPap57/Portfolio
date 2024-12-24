@@ -1,0 +1,16 @@
+.cursor-shadow {
+    display: none;
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background: #3DCFB680;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+    filter: blur(40px);
+    z-index: 1;
+
+    @media (pointer: fine) {
+        display: block; 
+    }
+}

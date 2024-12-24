@@ -1,0 +1,168 @@
+@import '../shared/_mixins.scss';
+
+
+.projects-section {
+    @include section-padding();
+    @include d-flex($dir: column, $gap: 40px);
+    width: 1248px;
+    margin-inline: auto;
+    z-index: 20;
+    position: relative;
+
+    .title-container {
+        @include d-flex($dir: column, $gap: 20px);
+    }
+
+    .intro-line {
+        width: 456px;
+    }
+}
+
+
+.projects-container {
+    @include d-flex($dir: column);
+    width: 880px;
+    border-top: 1px solid #3DCFB6;
+    margin-bottom: 16px;
+    position: relative;
+
+    .project {
+        @include d-flex($jus: space-between, $al: center);
+        width: 100%;
+        border-bottom: 1px solid #3DCFB6;
+        padding: 40px 32px;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            background-color: #3DCFB64D;
+
+            h3 img {
+                display: block;
+            }
+        }
+
+        h3 {
+            font-family: "Fira Code";
+            font-size: 24px;
+            font-weight: 700;
+            @include d-flex($al: center, $gap: 4px);
+
+            img {
+                display: none;
+            }
+        }
+
+        .technologies {
+            @include d-flex($gap: 4px);
+
+            div {
+                @include d-flex($gap: 4px);
+
+                div {
+                    width: 6px;
+                    height: 22px;
+                    color: #3DCFB6;
+                }
+            }
+        }
+    }
+    .project * {
+        cursor: pointer;
+    }
+}
+
+
+.images {
+    position: absolute;
+    width: 296px;
+    height: 192px;
+    right: -368px;
+    opacity: 0;
+    transition: all 125ms ease-in-out;
+
+    &.active {
+        opacity: 1;
+    }
+
+    img {
+        position: relative;
+        width: 296px;
+        height: 192px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 16px;
+
+
+    }
+
+    .background-img {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+
+    }
+}
+
+
+
+@media (max-width: 1300px) {
+    .images {
+        display: none;
+    }
+
+    .projects-section {
+        width: 880px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .projects-section {
+        width: 100%;
+    }
+
+    .projects-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        gap: 32px;
+
+        .title-container {
+            gap: 16px;
+        }
+
+        .intro-line {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+
+    .projects-container {
+        margin-bottom: 0;
+
+        .project {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 32px 0;
+            gap: 10px;
+
+            .technologies {
+                flex-wrap: wrap;
+
+                p {
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 390px) {
+    h1 {
+        word-break: break-word !important; 
+    }
+}

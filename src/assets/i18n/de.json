@@ -1,26 +1,122 @@
 {
-    "HEADER": {
-        "NAV_LINKS": [
+    "header": {
+        "navLinks": [
             "Über mich",
             "Fähigkeiten",
             "Projekte"
         ]
     },
-    "ATF": {
-        "TITLE": "Frontend-Entwickler",
-        "BUTTON_1": {
-            "TEXT": "Meine Arbeit ansehen",
-            "WIDTH": "226px"
-        },
-        "BUTTON_2": {
-            "TEXT": "Kontaktieren Sie mich",
-            "WIDTH": "231px"
-        },
-        "MARQUEE": [
+    "atf": {
+        "title": "Frontend-Entwickler",
+        "button1": "Meine Arbeit ansehen",
+        "button2": "Kontaktieren Sie mich",
+        "marquee": [
             "Verfügbar für Remote-Arbeit",
             "Frontend-Entwickler",
             "In der Nähe von Freiburg im Breisgau",
             "Bereit für neue Herausforderungen"
         ]
-    }
+    },
+    "aboutMe": {
+        "tagLine": "Wer ich bin",
+        "title": "Über mich",
+        "introLine": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus der Nähe von Freiburg. Fasziniert von den grenzenlosen Möglichkeiten der IT, liebe ich es, visuell ansprechende und benutzerfreundliche Websites und Anwendungen zu gestalten.",
+        "content": [
+            "Ich bin flexibel in meiner Arbeitsweise und arbeite sowohl vor Ort in Freiburg und Umgebung als auch remote effizient.",
+            "Mit einer offenen Einstellung suche ich stets neue Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich weiterzuentwickeln.",
+            "Für mich ist Programmieren mehr als nur Code schreiben; es ist eine kreative Form der Problemlösung. Ich lege großen Wert darauf, komplexe technische Herausforderungen in einfache und benutzerfreundliche Lösungen zu verwandeln, um Ihre Ziele zu erreichen und Ihre Visionen Wirklichkeit werden zu lassen."
+        ]
+    },
+    "skills": {
+        "tagLine": "Technologien",
+        "title": "Fähigkeiten",
+        "content": "Mein Weg hat mich dazu geführt, an verschiedenen Projekten zu arbeiten und eine Vielzahl von Frontend-Technologien und Konzepten anzuwenden. Ich bin offen dafür, neue Technologien und Methoden zu übernehmen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
+        "question1/2": "Benötigen Sie ",
+        "question2/2": "eine weitere Fähigkeit?",
+        "contactMe": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+        "button": "Lass uns reden",
+        "growth": "Ich habe ein besonderes Interesse daran, zu lernen"
+    },
+    "projects": {
+        "projectList": {
+            "Join": {
+                "description": "Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+            },
+            "Pokedex": {
+                "description": "Erforschen Sie Pokémon mit einer eleganten Benutzeroberfläche. Sehen Sie Statistiken, Typen und Fähigkeiten für jedes Pokémon, die von der PokeAPI abgerufen werden."
+            },
+            "El Pollo Loco": {
+                "description": "Spring- und Laufspiel, basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen."
+            },
+            "DA Bubble": {
+                "description": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, der Echtzeitnachrichtenzustellung und einer robusten Kanalorganisation."
+            }
+        },
+        "title": "Ausgewählte Projekte",
+        "introLine": "Entdecken Sie hier eine Auswahl meiner Arbeit – Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "question": "Worum geht es bei diesem Projekt?",
+        "button": "Nächstes Projekt",
+        "projectInWork": "Ups! Dieses Projekt ist noch nicht ganz fertig. Schau später gerne nochmal vorbei!"
+    },
+    "references": {
+        "title": "Was meine Kollegen über mich sagen",
+        "referencesList": [
+            {
+                "content": "Robert hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und sein proaktives Vorgehen waren entscheidend für den Erfolg unseres Projekts.",
+                "name": "H. Janisch - Team Partner"
+            },
+            {
+                "content": "Ich hatte das Glück, mit Robert an einem Gruppenprojekt bei der Developer Akademie zu arbeiten, das viel Einsatz erforderte. Er blieb immer ruhig, konzentriert und sorgte dafür, dass unser Team erfolgreich war. Er ist super kompetent, einfach zu arbeiten, und ich würde gerne wieder mit ihm zusammenarbeiten, wenn sich die Gelegenheit ergibt.",
+                "name": "A. Fischer - Team Partner"
+            },
+            {
+                "content": "Unser Projekt profitierte enorm von Roberts effizienter Arbeitsweise.",
+                "name": "T. Schulz - Frontend-Entwickler"
+            }
+        ]
+    },
+    "contactMe": {
+        "tagLine": "Kontaktiere mich",
+        "title": "Lass uns zusammen-arbeiten",
+        "question": "Hast du ein Problem zu lösen?",
+        "content": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
+        "contactMe1/2": "Brauchst du einen Frontend-Entwickler?",
+        "contactMe2/2": "Lass uns reden!"
+    },
+    "contactForm": {
+        "name": {
+            "label": "Wie heißt du?",
+            "placeholder": "Dein Name kommt hierhin",
+            "required": "Ups! Es scheint, dass dein Name fehlt",
+            "nameInvalid": "Min. 4 Zeichen erforderlich."
+        },
+        "email": {
+            "label": "Wie lautet deine E-Mail-Adresse?",
+            "placeholder": "deineemail@email.com",
+            "required": "Hoppla! Deine E-Mail-Adresse wird benötigt",
+            "emailInvalid": "Ungültige E-Mail-Adresse."
+        },
+        "message": {
+            "label": "Wie kann ich dir helfen?",
+            "placeholder": "Hallo Robert, ich interessiere mich für ...",
+            "required": "Was möchtest du entwickeln?",
+            "messageInvalid": "Min. 10 Zeichen erforderlich."
+        },
+        "policyAgreement": {
+            "label1/2": "Ich habe die ",
+            "label2/2": "gelesen und stimme der Verarbeitung meiner Daten gemäß der Richtlinie zu.",
+            "link": "Datenschutzerklärung",
+            "required": "Bitte akzeptiere die Datenschutzerklärung"
+        },
+        "button": "Sag Hallo ;)",
+        "emailSent": "Deine E-Mail wurde erfolgreich gesendet! Ich freue mich darauf, deine Nachricht zu lesen und zu sehen, wie ich zu deinen Projekten beitragen kann."
+    },
+    "footer": {
+        "role": "Web-Entwickler",
+        "location": "Freiburg Deutschland",
+        "legalNotice": "Impressum",
+        "privacyPolicy": "Datenschutz"
+    },
+    "legalNotice": "<div class='text-container legal'><h1>Impressum <p>Angaben gemäß § 5 TMG</p></h1><p>Florin-Robert Pap<br>Norsinger Str. 15<br>79189 Bad Krozingen</p><p><strong>Vertreten durch:</strong><br>Florin-Robert Pap</p><p><strong>Kontakt:</strong><br>Telefon: <a href='tel:0173532667'>0173 532667</a><br>Email: <a href='mailto:info@robert-pap.de'>info@robert-pap.de</a></p><p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>Florin-Robert Pap<br>Norsinger Str. 15<br>79189 Bad Krozingen</p><span><strong>Urheberrecht:</strong><br>Die Icons stammen aus einer Vorlage, die von der Developer Akademie bereitgestellt und in Figma erstellt wurde.<br><p>Das Projekt-in-arbeit-Icon wurde erstellt von <a href='https://www.flaticon.com/authors/juicy-fish' title='autor'>juicy_fish</a> von <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a> und ist lizenziert unter <a href='https://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0'>CC BY 3.0</a></p><p>Dieses Projekt verwendet Drittanbieter-Bibliotheken. Siehe <a href='/assets/3rdpartylicenses.txt' target='_blank' rel='noopener noreferrer'>Drittanbieter-Lizenzen</a> für weitere Informationen.</p></span><p><strong>Schriftarten:</strong><br>Die im Projekt verwendeten Schriftarten wurden lokal installiert und stammen von Google Fonts.</p></div>",
+    "privacyPolicy": "<div class='text-container privacy'><h1>Datenschutzerklärung</h1><h2>Verantwortlicher</h2><p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), ist:</p><p>Florin-Robert Pap<br />Norsinger Str. 15<br />79189 Bad Krozingen<br />Telefon: <a href='tel:0173532667'>0173 532667</a><br>E-Mail: <a href='mailto:info@robert-pap.de'>info@robert-pap.de</a></p></p><h2>Ihre Betroffenenrechte</h2><p>Unter den angegebenen Kontaktdaten können Sie gemäß EU-Datenschutz-Grundverordnung (DSGVO) jederzeit folgende Rechte ausüben:</p><ul><li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),</li><li>Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),</li><li>Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),</li><li>Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),</li><li>Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und</li><li>Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).</li></ul><p>Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.</p><p>Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.</p><p>Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: <a href='https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html'>https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p><h2>Verarbeitungstätigkeiten</h2><h3>Kontaktaufnahme</h3><p>Art und Zweck der Verarbeitung</p><p>Auf unserer Website ist ein Kontaktformular vorhanden, welches für die elektronische Kontaktaufnahme genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegeben Daten an uns übermittelt und gespeichert.</p><p>Eine Kontaktaufnahme ist über die bereitgestellten E-Mail-Adressen möglich. In diesem Fall werden die mit der E-Mail übermittelten personenbezogenen Daten des Nutzers gespeichert. Hierzu zählen Datum und Uhrzeit des E-Mailversands, E-Mailadresse, IP-Adressen sowie Informationen zu den an der E-Mail-Kommunikation beteiligten Servern.</p><p>Sie können Sie über die bereitgestellten Telefonnummern Kontakt zu uns aufnehmen. Hierbei erheben wir Protokolldaten, die Ihre Telefonnummer und die Dauer des Gesprächs beinhalten.</p><p>Unabhängig von der gewählten Kommunikationsart erheben wir den Inhalt Ihrer Anfrage. Ihre Daten werden zum Zweck der individuellen Kommunikation mit Ihnen gespeichert.</p><h4>Rechtsgrundlage</h4><p>Die Verarbeitung der Daten erfolgt auf der Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).</p><p>Unser berechtigtes Interesse an der Verarbeitung Ihrer Daten ist die Ermöglichung einer unkomplizierten Kontaktaufnahme.</p><p>Sofern Sie mit uns Kontakt aufnehmen, um ein Angebot zu erfragen, erfolgt die Verarbeitung der Daten zur Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).</p><h4>Empfänger</h4><p>Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter tätig werden.</p><h4>Speicherdauer</h4><p>Daten werden spätestens sechs Monate nach Bearbeitung der Kontaktaufnahme gelöscht.</p><p>Sofern es zu einem Vertragsverhältnis kommt, unterliegen wir den gesetzlichen Aufbewahrungsfristen. Diese betragen grundsätzlich 6 oder 10 Jahre aus Gründen der ordnungsmäßigen Buchführung und steuerrechtlichen Anforderungen.</p><h4>Bereitstellung vorgeschrieben oder erforderlich</h4><p>Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Wir können Ihre Anfrage jedoch nur bearbeiten, sofern Sie uns die erforderlichen Daten und den Grund der Anfrage mitteilen.</p><h4>Widerspruch</h4><p>Lesen Sie dazu die Informationen über Ihr Widerspruchsrecht nach Art. 21 DSGVO weiter unten.</p><h2>Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO</h2><h3>Einzelfallbezogenes Widerspruchsrecht</h3><p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.</p><p>Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p><h3>Empfänger eines Widerspruchs</h3><p class='generator_user_input'>Florin-Robert Pap</p><h2>Änderung unserer Datenschutzerklärung</h2><p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p><h2>Fragen zum Datenschutz</h2><p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an den oben genannten Verantwortlichen.</p><h2>Urheberrechtliche Hinweise</h2><p><em>Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt – den Experten für <a href='https://www.activemind.de/datenschutz/datenschutzbeauftragter/' target='_blank' rel='noopener dofollow'>externe Datenschutzbeauftragte</a> (Version #2024-10-25).</em></p></div>"
 }

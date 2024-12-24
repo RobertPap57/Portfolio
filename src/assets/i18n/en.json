@@ -1,26 +1,122 @@
 {
-    "HEADER": {
-        "NAV_LINKS": [
+    "header": {
+        "navLinks": [
             "About me",
             "Skills",
             "Projects"
         ]
     },
-    "ATF": {
-        "TITLE": "Frontend developer",
-        "BUTTON_1": {
-            "TEXT": "Check my work",
-            "WIDTH": "172px"
-        },
-        "BUTTON_2": {
-            "TEXT": "Contact me",
-            "WIDTH": "143px"
-        },
-        "MARQUEE": [
+    "atf": {
+        "title": "Frontend Developer",
+        "button1": "Check my work",
+        "button2": "Contact me",
+        "marquee": [
             "Available for remote work",
             "Frontend Developer",
             "Based near Freiburg im Breisgau",
             "Open to work"
         ]
-    }
+    },
+    "aboutMe": {
+        "tagLine": "Who I Am",
+        "title": "About me",
+        "introLine": "Hi, I'm a german speaking Frontend Developer based near Freiburg. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+        "content": [
+            "Flexible in terms of working environments, I can work effectively both on-site in and around Freiburg and remotely.",
+            "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
+            "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+        ]
+    },
+    "skills": {
+        "tagLine": "Technologies",
+        "title": "Skill Set",
+        "content": "My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+        "question1/2": "You need ",
+        "question2/2": "another skill?",
+        "contactMe": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+        "button": "Let's Talk",
+        "growth": "I have a special interest in learning"
+    },
+    "projects": {
+        "projectList": {
+            "Join": {
+                "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+            },
+            "Pokedex": {
+                "description": "Explore Pokémon with a sleek interface. View stats, types, and abilities fetched from PokeAPI for every Pokémon."
+            },
+            "El Pollo Loco": {
+                "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+            },
+            "DA Bubble": {
+                "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+            }
+        },
+        "title": "Featured Projects",
+        "introLine": "Explore a selection of my work here - Interact whit projects to se my skills in action.",
+        "question": "What is this project about?",
+        "button": "Next project",
+        "projectInWork": "Oops! This project isn’t quite ready yet. Please check back later!"
+    },
+    "references": {
+        "title": "What my colleagues say about me",
+        "referencesList": [
+            {
+                "content": "Robert has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+                "name": "H. Janisch - Team Partner"
+            },
+            {
+                "content": "I had the good fortune of working with Robert in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
+                "name": "A. Fischer - Team Partner"
+            },
+            {
+                "content": "Our project benefited enormously from Robert efficient way of working.",
+                "name": "T. Schulz - Frontend Developer"
+            }
+        ]
+    },
+    "contactMe": {
+        "tagLine": "Contact me",
+        "title": "Let's work together",
+        "question": "Got a problem to solve?",
+        "content": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "contactMe1/2": "Need a Frontend developer?",
+        "contactMe2/2": "Let's talk!"
+    },
+    "contactForm": {
+        "name": {
+            "label": "What's your name?",
+            "placeholder": "Your name goes here",
+            "required": "Oops! it seems your name is missing",
+            "nameInvalid": "Min. 4 characters required."
+        },
+        "email": {
+            "label": "What's your email?",
+            "placeholder": "youremail@email.com",
+            "required": "Hoopla! your email is required",
+            "emailInvalid": "Invalid email."
+        },
+        "message": {
+            "label": "How cann I help you?",
+            "placeholder": "Hello Robert, I am interested in ...",
+            "required": "What do you need to develop?",
+            "messageInvalid": "Min. 10 characters required."
+        },
+        "policyAgreement": {
+            "label1/2": "I've read the ",
+            "label2/2": "and agree to the processing of my data as outlined.",
+            "link": "privacy policy",
+            "required": "Please accept the privacy policy"
+        },
+        "button": "Say Hello ;)",
+        "emailSent": "Your email was successfully sent! I’m excited to read your message and see how I can contribute to your projects."
+    },
+    "footer": {
+        "role": "Web Developer",
+        "location": "Freiburg Germany",
+        "legalNotice": "Legal Notice",
+        "privacyPolicy": "Privacy Policy"
+    },
+    "legalNotice": "<div class='text-container legal'><h1>Legal Notice <p>Information according to § 5 TMG</p></h1><p>Florin-Robert Pap<br>Norsinger Str. 15<br>79189 Bad Krozingen</p><p><strong>Represented by:</strong><br>Florin-Robert Pap</p><p><strong>Contact:</strong><br>Phone: <a href='tel:0173532667'>0173 532667</a><br>Email: <a href='mailto:info@robert-pap.de'>info@robert-pap.de</a></p><p><strong>Responsible for the content according to § 55 Abs. 2 RStV:</strong><br>Florin-Robert Pap<br>Norsinger Str. 15<br>79189 Bad Krozingen</p><span><strong>Copyright:</strong><br>The icons are from a template provided by Developer Academy and created in Figma.<br><p>The project-in-work Icon was made by <a href='https://www.flaticon.com/authors/juicy-fish' title='autor'>juicy_fish</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a> and is licensed by <a href='https://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0'>CC BY 3.0</a></p><p>This project uses third-party libraries. See <a href='/assets/3rdpartylicenses.txt' target='_blank' rel='noopener noreferrer'>Third-party Licenses</a> for more information.</p></span><p><strong>Fonts:</strong><br>The fonts used in the project were installed locally and originate from Google Fonts.</p>",
+    "privacyPolicy": "<div class='text-container privacy'><h1>Privacy Policy</h1><div><h2>Controller</h2><p>The controller in the sense of data protection laws, in particular the EU General Data Protection Regulation (GDPR), is:</p><p>Florin-Robert Pap<br />Norsinger Str. 15<br />79189 Bad Krozingen<br />Phone: <a href='tel:0173532667'>0173 532667</a><br />E-Mail: <a href='mailto:info@robert-pap.de'>info@robert-pap.de</a></p></p><h2>Your Rights as Affected Persons</h2><p>Under the contact details provided, you can exercise the following rights at any time in accordance with the EU General Data Protection Regulation (GDPR):</p><ul>  <li>Information about your data stored with us and how it is processed (Art. 15 GDPR),</li>  <li>Correction of incorrect personal data (Art. 16 GDPR),</li>  <li>Deletion of your data stored with us (Art. 17 GDPR),</li>  <li>Restriction of data processing if we are not yet allowed to delete your data due to legal obligations (Art. 18 GDPR),</li>  <li>Objection to the processing of your data by us (Art. 21 GDPR) and</li>  <li>Data portability if you have consented to the data processing or have concluded a contract with us (Art. 20 GDPR).</li></ul><p>If you have given us your consent, you can withdraw it at any time with effect for the future.</p><p>You can lodge a complaint with a supervisory authority at any time, e.g., the supervisory authority of your federal state of residence or the authority responsible for us as the controller.</p><p>A list of supervisory authorities (for the non-public sector) with addresses can be found at: <a href='https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html'>https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p><h2>Processing Activities</h2><h3>Contact</h3><p>Type and Purpose of Processing</p><p>There is a contact form on our website that can be used for electronic contact. If a user takes advantage of this option, the data entered in the input mask will be transmitted to us and stored.</p><p>Contact can also be made via the e-mail addresses provided. In this case, the user's personal data transmitted with the e-mail will be stored. This includes the date and time of the e-mail dispatch, the e-mail address, IP addresses, and information about the servers involved in the e-mail communication.</p><p>You can also contact us using the phone numbers provided. When doing so, we collect protocol data that includes your phone number and the duration of the call.</p><p>Regardless of the chosen communication method, we collect the content of your inquiry. Your data will be stored for the purpose of individual communication with you.</p><h4>Legal Basis</h4><p>Data processing is based on a legitimate interest (Art. 6(1)(f) GDPR).</p><p>Our legitimate interest in processing your data is to facilitate uncomplicated contact.</p><p>If you contact us to request an offer, the data processing is carried out to perform pre-contractual measures (Art. 6(1)(b) GDPR).</p><h4>Recipients</h4><p>Recipients of the data may be technical service providers who act as order processors for the operation and maintenance of our website.</p><h4>Storage Duration</h4><p>Data will be deleted no later than six months after processing the contact request.</p><p>If a contractual relationship arises, we are subject to the statutory retention periods. These generally amount to 6 or 10 years for reasons of proper accounting and tax requirements.</p><h4>Mandatory or Required Provision</h4><p>The provision of your personal data is voluntary. However, we can only process your inquiry if you provide us with the required data and the reason for the inquiry.</p><h4>Objection</h4><p>Read the information about your right to object under Art. 21 GDPR below.</p><h2>Information about Your Right to Object under Art. 21 GDPR</h2><h3>Right to Object in Individual Cases</h3><p>You have the right to object, on grounds relating to your particular situation, at any time to processing of personal data concerning you which is based on point (f) of Article 6(1), including profiling based on those provisions.</p><p>If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights, and freedoms or for the establishment, exercise, or defense of legal claims.</p><h3>Recipient of an Objection</h3><p class='generator_user_input'>Florin-Robert Pap</p><h2>Changes to Our Privacy Policy</h2><p>We reserve the right to adjust this privacy policy to ensure it always meets the current legal requirements or to incorporate changes to our services in the privacy policy, e.g., when introducing new services. The new privacy policy will then apply for your next visit.</p><h2>Questions about Data Protection</h2><p>If you have questions about data protection, please write to us at the address of the controller mentioned above.</p><h2>Copyright Notices</h2><p><em>This privacy policy was created with the help of activeMind AG – experts for <a href='https://www.activemind.de/datenschutz/datenschutzbeauftragter/' target='_blank' rel='noopener dofollow'>external data protection officers</a> (Version #2024-10-25).</em></p></div></div>"
 }

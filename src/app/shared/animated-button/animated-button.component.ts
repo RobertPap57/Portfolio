@@ -1,36 +1,47 @@
 
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-animated-button',
   standalone: true,
-  imports: [ CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './animated-button.component.html',
   styleUrl: './animated-button.component.scss'
 })
 export class AnimatedButtonComponent {
-  position = 0; // Tracks the current X position of the child element
-  animationLeftId: any; // Holds the reference to the animation loop
-  animationToCenterId: any; // Holds the reference to the animation loop
+  constructor(private translate: TranslateService) { }
+  @Input() disabled: boolean = false;
+  position = 0; 
+  animationLeftId: any; 
+  animationToCenterId: any; 
 
-  startHover() {
+  startHover() { 
+    if (!this.disabled) {
     cancelAnimationFrame(this.animationToCenterId);
     this.animateLeft();
+    }
   }
 
   stopHover() {
-    cancelAnimationFrame(this.animationLeftId); // Stop the animation loop
-    this.animateToCenter(); // Move back to center
+    cancelAnimationFrame(this.animationLeftId); 
+    this.animateToCenter(); 
   }
 
   animateLeft() {
     let loop = () => {
-      this.position -= 3; // Move left
-      if (this.position < -200){
-        this.position = 200; // Reset position if out of bounds
+      this.position -= 3; 
+      if (this.translate.currentLang === 'de') {
+        if (this.position < -230) {
+          this.position = 230; 
+
+        }
+      }
+      else if (this.position < -200) {
+        this.position = 200; 
 
       }
       this.animationLeftId = requestAnimationFrame(loop);
@@ -40,12 +51,12 @@ export class AnimatedButtonComponent {
 
   animateToCenter() {
     let stepBack = () => {
-      let currentPosition = (0 - this.position) * 0.3; // Calculate movement to center
-      this.position += currentPosition; // Move closer to center
+      let currentPosition = (0 - this.position) * 0.3; 
+      this.position += currentPosition; 
       if (Math.abs(currentPosition) > 0.2) {
-        this.animationToCenterId = requestAnimationFrame(stepBack); // Continue animating until close enough
+        this.animationToCenterId = requestAnimationFrame(stepBack); 
       } else {
-        this.position = 0; // Snap to center
+        this.position = 0; 
       }
     };
     this.animationToCenterId = requestAnimationFrame(stepBack);
