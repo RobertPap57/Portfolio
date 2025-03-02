@@ -12,7 +12,7 @@
 }
 
 .project-container {
-    @include d-flex($gap: 88px, $al: center, $jus: center);
+    @include d-flex($dir:row-reverse, $gap: 88px, $al: center, $jus: center);
     @include scroll-bar();
     position: fixed;
     height: 656px;
@@ -91,9 +91,9 @@
             span img {
                 transform: translate(4px, -2px);
             }
-          
+
         }
-      
+
         p {
             transition: all 125ms ease-in-out;
         }
@@ -108,27 +108,31 @@
                 cursor: pointer;
             }
         }
+
         &.disabled {
             pointer-events: none;
+
             span {
                 img {
                     filter: hue-rotate(180deg) saturate(0%) brightness(100%);
                 }
             }
+
             &:hover {
                 span img {
                     transform: none;
                 }
-              
-            } 
+
+            }
         }
     }
 
 }
+
 .button-wrapper {
-    &:hover ~.project-in-work {
+    &:hover~.project-in-work {
         display: flex !important;
-    } 
+    }
 }
 
 .project-in-work {
@@ -143,21 +147,26 @@
     border-radius: 16px;
     padding: 16px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
-    
+
     p {
         font-size: 16px;
         font-family: "Karla";
         color: #3DCFB6;
     }
+
     .pointer {
         position: absolute;
         bottom: -14px;
         left: 40px;
         filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
     }
+
     .in-work-img {
         width: 76px;
 
+    }
+    @media (pointer: coarse) {
+        display: flex !important;
     }
 
 }
@@ -226,7 +235,7 @@
 
 @media (max-width: 1300px) {
     .project-container {
-        @include d-flex($dir: column-reverse, $al: center, $jus: flex-start, $gap: 40px);
+        @include d-flex($dir: column, $al: center, $jus: flex-start, $gap: 40px);
         width: auto;
         height: auto;
         max-height: 95vh;
@@ -253,8 +262,9 @@
             font-size: 18px;
         }
     }
+
     .next-project {
-        p{
+        p {
             font-size: 18px !important;
         }
     }
@@ -270,32 +280,42 @@
         .content {
             width: 100%;
             gap: 32px;
-            .title{
+
+            .title {
                 gap: 8px;
-                h2{
+
+                h2 {
                     font-size: 72px;
                     line-height: 72px;
                 }
+
                 h1 {
                     font-size: 56px;
                     line-height: 45px;
                 }
             }
+
             .description {
                 gap: 20px;
+
                 div {
                     gap: 16px;
+
                     h1 {
                         font-size: 20px;
                     }
-                    p{
+
+                    p {
                         font-size: 16px;
                     }
                 }
-                .technologies{
+
+                .technologies {
                     flex-wrap: wrap;
+
                     div {
-                        gap:4px;
+                        gap: 4px;
+
                         img {
                             width: 20px;
                             height: 20px;
@@ -303,6 +323,7 @@
                     }
                 }
             }
+
             .buttons {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -317,11 +338,25 @@
     }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 450px) {
+    .project-container {
+        padding-inline: 12px;
+        gap: 32px;
+    }
+
     .project-in-work {
-       @include d-flex($dir: column, $al: center, $jus: center, $gap: 8px);
-       width: 100%;
-       top: auto;
-       bottom: 152px;
+        flex-direction: column ;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        top: auto;
+        bottom: 78px;
+    }
+}
+
+@media (max-width: 383px) {
+    .buttons {
+        gap: 16px
     }
 }

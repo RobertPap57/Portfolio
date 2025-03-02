@@ -53,8 +53,8 @@ export class ProjectlistdataService {
       image: 'da_bubble.png',
       imageBig: 'da_bubble_big.png',
       imgPosition: { bottom: '0' },
-      githubLink: '',
-      testLink: ''
+      githubLink: 'https://github.com/RobertPap57/DABubble',
+      testLink: 'https://dabubble.robert-pap.de/'
 
     }
   ]

@@ -13,4 +13,11 @@ import { CommonModule } from '@angular/common';
 })
 export class FooterComponent {
   constructor(public router: Router) {}
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // This ensures a smooth scrolling animation
+    });
+  }
 }

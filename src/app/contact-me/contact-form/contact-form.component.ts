@@ -4,16 +4,19 @@ import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { AnimatedButtonComponent } from '../../shared/animated-button/animated-button.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, TranslateModule, AnimatedButtonComponent, CommonModule],
+  imports: [FormsModule, TranslateModule, AnimatedButtonComponent, CommonModule, RouterModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
+  constructor(public router: Router) {}
 
   isChecked = false;
   formSubmitted = false;
@@ -25,12 +28,11 @@ export class ContactFormComponent {
     message: ''
   }
 
+  mailTest = false;
 
-
-  mailTest = true;
   http = inject(HttpClient);
   post = {
-    endPoint: 'https://robert-pap.de/portfolio/sendMail.php',
+    endPoint: 'https://robert-pap.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -43,10 +45,9 @@ export class ContactFormComponent {
   onSubmit(ngForm: NgForm) {
     this.formSubmitted = true;
     if (ngForm.invalid) {
-      // Iterate over controls with proper typing
       Object.keys(ngForm.controls).forEach((key) => {
         const control = ngForm.controls[key];
-        control.markAsTouched(); // Mark each control as touched
+        control.markAsTouched(); 
       });
     }
 
@@ -55,8 +56,7 @@ export class ContactFormComponent {
         headers: { 'Content-Type': 'text/plain' },
         responseType: 'text'
       }).subscribe({
-        next: (response) => {
-          console.log(response);
+        next: () => {
           ngForm.resetForm();
         },
         error: (error) => {
@@ -65,26 +65,22 @@ export class ContactFormComponent {
         complete: () => {
           console.info('send post complete');
           this.emailSentMsg();
+          ngForm.resetForm();
+          this.formSubmitted = false;
         },
       });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log('this is a test', this.contactData);
       ngForm.resetForm();
       this.emailSentMsg();
       this.formSubmitted = false;
-    }
-    else if (ngForm.submitted && this.mailTest) {
-      console.log('not valid', this.contactData);
     }
   }
 
   emailSentMsg() {
     this.emailSent = true;
-    console.log(this.emailSent);
     
     setTimeout(() => {
       this.emailSent = false;
-      console.log(this.emailSent);
     }, 5000);
 
   }

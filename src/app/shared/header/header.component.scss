@@ -16,6 +16,10 @@ header {
     nav {
         @include d-flex($gap: 24px);
 
+        .links-wrapper {
+            @include d-flex($gap: 24px);
+        }
+
         a {
             position: relative;
             font-family: 'Fira Code';
@@ -206,6 +210,7 @@ header {
 @media (max-width: 1300px) {
     .header-container {
         padding-inline: 50px;
+        
     }
 }
 
@@ -219,6 +224,11 @@ header {
         margin-top: 32px;
         height: 50px;
         position: relative;
+        nav {
+            .links-wrapper {
+                flex-direction: column;
+            }
+        }
     }
 
     .logo-container {

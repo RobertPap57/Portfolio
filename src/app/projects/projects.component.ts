@@ -29,7 +29,6 @@ export class ProjectsComponent {
 
   openProject(index: number) {
     this.projectService.projectIndex.set(index); 
-    console.log(this.projectIndex);
   }
 
 }

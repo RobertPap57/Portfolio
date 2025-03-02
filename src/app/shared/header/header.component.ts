@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateService } from "@ngx-translate/core";
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -10,11 +12,12 @@ import { TranslateService } from "@ngx-translate/core";
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  
   menuOpen: boolean = false;
   toggleState: boolean = false;
   activeLink: number = 0;
@@ -24,7 +27,6 @@ export class HeaderComponent {
   constructor(public translate: TranslateService) {
     this.translateNavLinks();
 
-    // Re-fetch the nav links whenever the language changes
     this.translate.onLangChange.subscribe(() => {
       this.translateNavLinks();
     });
@@ -43,12 +45,14 @@ export class HeaderComponent {
 
   selectLink(index: number): void {
     this.activeLink = index + 1;
-    this.closeMenu(); // Close menu after clicking a link
+    setTimeout(() => {
+      this.activeLink = 0
+    }, 500);
+    this.closeMenu(); 
   }
 
   switchLanguage(language: string): void {
     this.translate.use(language);
-    console.log(language);
     this.closeMenu();
 
   }

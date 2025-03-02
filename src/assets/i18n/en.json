@@ -88,7 +88,7 @@
             "label": "What's your name?",
             "placeholder": "Your name goes here",
             "required": "Oops! it seems your name is missing",
-            "nameInvalid": "Min. 4 characters required."
+            "nameInvalid": "Min. 4 letter required."
         },
         "email": {
             "label": "What's your email?",

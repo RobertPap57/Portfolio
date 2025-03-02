@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-container">
         <div class="logo-container">
-            <a href="#atf">
+            <a [routerLink]="'/'" [fragment]="'atf'"  (click)="scrollToTop()">
                 <img src="../assets/images/shared/logo.png" alt="">
             </a>
             <div>
@@ -15,7 +15,7 @@
             <a href="">LinkedIn</a>
             <a href="mailto:info&#64;robert-pap.de">Email</a>
             <a *ngIf="router.url !== '/legal-notice'" routerLink="/legal-notice">{{'footer.legalNotice' | translate}}</a>
-            <a *ngIf="router.url === '/legal-notice'" routerLink="/legal-notice" @elsei routerLink="/privacy-policy">{{'footer.privacyPolicy' | translate}}</a>
+            <a *ngIf="router.url === '/legal-notice'" routerLink="/privacy-policy">{{'footer.privacyPolicy' | translate}}</a>
         </div>
     </div>
     <h1 class="hide-desktop"> &#169; Robert Pap 2024</h1>

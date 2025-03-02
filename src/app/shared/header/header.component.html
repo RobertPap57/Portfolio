@@ -9,13 +9,15 @@
                 <input type="checkbox" [(ngModel)]="toggleState" (change)="switchLanguage(toggleState ? 'de' : 'en')">
                 <span class="slider"></span>
             </label>
-            <a (click)="selectLink(i)" [class.link-selected]="activeLink === i + 1"
-                *ngFor="let link of navLinks; let i = index" [href]="'#' + linkIds[i]">{{link}}
-                <span></span>
-            </a>
+            <div class="links-wrapper">
+                <a (click)="selectLink(i)" [class.link-selected]="activeLink === i + 1"
+                    *ngFor="let link of navLinks; let i = index" [href]="'#' + linkIds[i]">{{link}}
+                    <span></span>
+                </a>  
+            </div>
         </nav>
     
-        <a href="#atf" class="logo-container">
+        <a routerLink="" class="logo-container">
             <img src="" alt="">
         </a>
 
