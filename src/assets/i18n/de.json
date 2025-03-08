@@ -34,7 +34,7 @@
         "question1/2": "Benötigen Sie ",
         "question2/2": "eine weitere Fähigkeit?",
         "contactMe": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
-        "button": "Lass uns reden",
+        "button": "Lassen Sie uns reden",
         "growth": "Ich habe ein besonderes Interesse daran, zu lernen"
     },
     "projects": {
@@ -76,40 +76,40 @@
         ]
     },
     "contactMe": {
-        "tagLine": "Kontaktiere mich",
-        "title": "Lass uns zusammen-arbeiten",
-        "question": "Hast du ein Problem zu lösen?",
-        "content": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
-        "contactMe1/2": "Brauchst du einen Frontend-Entwickler?",
-        "contactMe2/2": "Lass uns reden!"
+        "tagLine": "Kontaktieren Sie mich",
+        "title": "Lassen Sie uns zusammen-arbeiten",
+        "question": "Haben Sie ein Problem zu lösen?",
+        "content": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihren Ideen kennenzulernen und mit meiner Arbeit zu Ihrem Projekten beizutragen.",
+        "contactMe1/2": "Brauchen Sie einen Frontend-Entwickler?",
+        "contactMe2/2": "Lassen Sie uns reden!"
     },
     "contactForm": {
         "name": {
-            "label": "Wie heißt du?",
-            "placeholder": "Dein Name kommt hierhin",
-            "required": "Ups! Es scheint, dass dein Name fehlt",
+            "label": "Wie heißen Sie?",
+            "placeholder": "Ihr Name kommt hierhin",
+            "required": "Ups! Es scheint, dass Ihr Name fehlt",
             "nameInvalid": "Min. 4 Buchstaben erforderlich."
         },
         "email": {
-            "label": "Wie lautet deine E-Mail-Adresse?",
-            "placeholder": "deineemail@email.com",
-            "required": "Hoppla! Deine E-Mail-Adresse wird benötigt",
+            "label": "Wie lautet Ihre E-Mail-Adresse?",
+            "placeholder": "ihreemail@email.com",
+            "required": "Hoppla! Ihre E-Mail-Adresse wird benötigt",
             "emailInvalid": "Ungültige E-Mail-Adresse."
         },
         "message": {
-            "label": "Wie kann ich dir helfen?",
+            "label": "Wie kann ich Ihnen helfen?",
             "placeholder": "Hallo Robert, ich interessiere mich für ...",
-            "required": "Was möchtest du entwickeln?",
+            "required": "Was möchten Sie entwickeln?",
             "messageInvalid": "Min. 10 Zeichen erforderlich."
         },
         "policyAgreement": {
             "label1/2": "Ich habe die ",
             "label2/2": "gelesen und stimme der Verarbeitung meiner Daten gemäß der Richtlinie zu.",
             "link": "Datenschutzerklärung",
-            "required": "Bitte akzeptiere die Datenschutzerklärung"
+            "required": "Bitte akzeptieren Sie die Datenschutzerklärung"
         },
-        "button": "Sag Hallo ;)",
-        "emailSent": "Deine E-Mail wurde erfolgreich gesendet! Ich freue mich darauf, deine Nachricht zu lesen und zu sehen, wie ich zu deinen Projekten beitragen kann."
+        "button": "Sagen Sie Hallo ;)",
+        "emailSent": "Ihre E-Mail wurde erfolgreich gesendet! Ich freue mich darauf, Ihre Nachricht zu lesen und herauszufinden, wie ich zu Ihren Projekten beitragen kann."
     },
     "footer": {
         "role": "Web-Entwickler",
