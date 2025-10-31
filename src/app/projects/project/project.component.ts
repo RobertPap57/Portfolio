@@ -5,11 +5,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
-  selector: 'app-project',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './project.component.html',
-  styleUrl: './project.component.scss'
+    selector: 'app-project',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './project.component.html',
+    styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
   @ViewChild('projectContainer') projectContainer!: ElementRef;

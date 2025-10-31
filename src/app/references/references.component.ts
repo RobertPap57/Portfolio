@@ -4,11 +4,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
-  selector: 'app-references',
-  standalone: true,
-  imports: [ CommonModule, TranslateModule ],
-  templateUrl: './references.component.html',
-  styleUrl: './references.component.scss'
+    selector: 'app-references',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './references.component.html',
+    styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
 

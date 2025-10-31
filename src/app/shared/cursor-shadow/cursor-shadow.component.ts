@@ -3,11 +3,10 @@ import { Component, HostListener } from '@angular/core';
 
 
 @Component({
-  selector: 'app-cursor-shadow',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './cursor-shadow.component.html',
-  styleUrl: './cursor-shadow.component.scss',
+    selector: 'app-cursor-shadow',
+    imports: [CommonModule],
+    templateUrl: './cursor-shadow.component.html',
+    styleUrl: './cursor-shadow.component.scss'
 })
 export class CursorShadowComponent {
   @HostListener('document:mousemove', ['$event'])

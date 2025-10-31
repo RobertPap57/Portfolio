@@ -5,11 +5,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-above-the-fold',
-  standalone: true,
-  imports: [ TranslateModule, AnimatedButtonComponent, CommonModule],
-  templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+    selector: 'app-above-the-fold',
+    imports: [TranslateModule, AnimatedButtonComponent, CommonModule],
+    templateUrl: './above-the-fold.component.html',
+    styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent {
 btnHover = false

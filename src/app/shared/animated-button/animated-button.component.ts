@@ -6,11 +6,10 @@ import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
-  selector: 'app-animated-button',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './animated-button.component.html',
-  styleUrl: './animated-button.component.scss'
+    selector: 'app-animated-button',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './animated-button.component.html',
+    styleUrl: './animated-button.component.scss'
 })
 export class AnimatedButtonComponent {
   constructor(private translate: TranslateService) { }

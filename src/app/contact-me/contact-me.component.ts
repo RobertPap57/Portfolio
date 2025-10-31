@@ -6,11 +6,10 @@ import { ContactFormComponent } from "./contact-form/contact-form.component";
 
 
 @Component({
-  selector: 'app-contact-me',
-  standalone: true,
-  imports: [CommonModule, TranslateModule, ContactFormComponent],
-  templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.scss'
+    selector: 'app-contact-me',
+    imports: [CommonModule, TranslateModule, ContactFormComponent],
+    templateUrl: './contact-me.component.html',
+    styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
 

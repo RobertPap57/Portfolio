@@ -6,11 +6,10 @@ import { ProjectComponent } from './project/project.component';
 
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule, TranslateModule, ProjectComponent],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    imports: [CommonModule, TranslateModule, ProjectComponent],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
 

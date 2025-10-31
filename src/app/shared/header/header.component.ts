@@ -10,11 +10,10 @@ import { RouterModule } from '@angular/router';
 
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    imports: [CommonModule, FormsModule, RouterModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   

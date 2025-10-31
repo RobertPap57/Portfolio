@@ -7,18 +7,18 @@ import { ReferencesComponent } from "../references/references.component";
 import { ContactMeComponent } from "../contact-me/contact-me.component";
 import { TranslateModule } from "@ngx-translate/core";
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    AboutMeComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ReferencesComponent,
-    ContactMeComponent,
-    AboveTheFoldComponent,
-    TranslateModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [
+        AboutMeComponent,
+        SkillsComponent,
+        ProjectsComponent,
+        ReferencesComponent,
+        ContactMeComponent,
+        AboveTheFoldComponent,
+        TranslateModule
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 

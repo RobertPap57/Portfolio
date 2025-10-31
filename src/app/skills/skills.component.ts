@@ -5,11 +5,10 @@ import { AnimatedButtonComponent } from '../shared/animated-button/animated-butt
 
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [TranslateModule, CommonModule, AnimatedButtonComponent],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+    selector: 'app-skills',
+    imports: [TranslateModule, CommonModule, AnimatedButtonComponent],
+    templateUrl: './skills.component.html',
+    styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
   skills: string[] = [

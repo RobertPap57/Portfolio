@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-contact-form',
-  standalone: true,
-  imports: [FormsModule, TranslateModule, AnimatedButtonComponent, CommonModule, RouterModule],
-  templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+    selector: 'app-contact-form',
+    imports: [FormsModule, TranslateModule, AnimatedButtonComponent, CommonModule, RouterModule],
+    templateUrl: './contact-form.component.html',
+    styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
   constructor(public router: Router) {}
