@@ -11,7 +11,7 @@
         <div>
           <p>{{'aboutMe.introLine' | translate}}</p>
           <div>
-            @for (line of aboutMeContent; track line; let i = $index) {
+            @for (line of aboutMeContent; track $index; let i = $index) {
               <div>
                 <img [src]="'../assets/images/about-me/' + contentIcons[i] + '.svg'" alt="">
                 <p>{{line}}</p>

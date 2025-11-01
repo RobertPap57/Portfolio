@@ -1,4 +1,4 @@
-@import '../shared/_mixins.scss';
+@use '../shared/mixins' as *;
 
 .background {
     width: 100%;
@@ -6,24 +6,24 @@
 }
 
 .skills-section {
-    @include section-padding();
-    @include d-flex($jus: space-evenly);
     width: 100%;
     margin-inline: auto;
+    @include section-padding();
+    @include d-flex($jus: space-evenly);
 }
 
 
 .text-container {
-    @include d-flex($dir: column, $gap: 20px);
     position: relative;
     z-index: 10;
     width: 520px;
+    @include d-flex($dir: column, $gap: 20px);
 
 
     .text-box {
+        width: 100%;
         @include text-box();
         @include d-flex($dir: column, $gap: 40px);
-        width: 100%;
 
         h1 {
             word-break: break-word;

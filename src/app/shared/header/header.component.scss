@@ -1,4 +1,4 @@
-@import '../_mixins.scss';
+@use '../mixins' as *;
 
 header {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
@@ -9,9 +9,9 @@ header {
 }
 
 .header-container {
-    @include d-flex($al: center, $jus: space-between);
     padding-inline: 96px;
     height: 98px;
+    @include d-flex($al: center, $jus: space-between);
 
     nav {
         @include d-flex($gap: 24px);
@@ -113,13 +113,13 @@ header {
 
 .options {
     position: absolute;
-    @include d-flex($al: center, $jus: center);
     width: 84px;
     height: 28px;
     top: 0;
     left: -1px;
     border-radius: 100px;
     z-index: 2;
+    @include d-flex($al: center, $jus: center);
 
     &:hover~span {
         border: 1px solid white !important;
@@ -163,10 +163,10 @@ header {
 }
 
 .burger-menu {
-    @include d-flex($dir: column, $al: center, $jus: center, $gap: 8px);
     width: 48px;
     height: 48px;
     cursor: pointer;
+    @include d-flex($dir: column, $al: center, $jus: center, $gap: 8px);
 
     span {
         height: 2px;
@@ -247,7 +247,6 @@ header {
 
     .nav-mobile {
         display: none !important;
-        @include text-box();
         background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
         flex-direction: column-reverse !important;
         position: absolute;
@@ -255,6 +254,7 @@ header {
         top: 48px;
         right: 16px;
         z-index: 5;
+        @include text-box();
         &.active {
             display: flex !important;
         }

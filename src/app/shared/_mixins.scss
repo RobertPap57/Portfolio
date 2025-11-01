@@ -1,29 +1,35 @@
 @mixin d-flex($dir: row, $al: flex-start, $jus: flex-start, $gap: 0) {
-  display: flex;
-  flex-direction: $dir;
-  align-items: $al;
-  justify-content: $jus;
-  gap: $gap;
+  & {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $al;
+    justify-content: $jus;
+    gap: $gap;
+  }
 }
 
 
 @mixin text-box {
-  padding: 32px;
-  border: 1px solid #3DCFB6;
-  border-radius: 30px;
-  background-color: #3DCFB61A;
+  & {
+    padding: 32px;
+    border: 1px solid #3DCFB6;
+    border-radius: 30px;
+    background-color: #3DCFB61A;
+  }
 }
 
 @mixin section-padding {
-  padding-block: 72px;
+  & {
+    padding-block: 72px;
 
-  @media (max-width: 1024px) {
-    padding-block: 50px !important;
-    padding-inline: 50px !important;
-  }
+    @media (max-width: 1024px) {
+      padding-block: 50px !important;
+      padding-inline: 50px !important;
+    }
 
-  @media (max-width: 768px) {
-    padding-inline: 16px !important;
+    @media (max-width: 768px) {
+      padding-inline: 16px !important;
+    }
   }
 }
 
@@ -46,42 +52,43 @@
 }
 
 @mixin button {
-  border: 1px solid #ffffff;
-  border-radius: 100px;
-  overflow: hidden;
-  padding: 13px 24px;
-  cursor: pointer;
-  @include d-flex($al: center, $jus: center);
-  transition: all 125ms ease-in-out;
-
-  p {
-    text-align: center;
-
-    @media (max-width: 768px) {
-      font-size: 18px;
-    }
-  }
-
-  &:hover {
-    border: 1px solid #3DCFB6;
+  & {
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    overflow: hidden;
+    padding: 13px 24px;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    @include d-flex($al: center, $jus: center);
 
     p {
-      color: #3DCFB6;
-      cursor: pointer;
-    }
-  }
+      text-align: center;
 
-  &.disabled {
-    color: #FFFFFFCC !important;
-    border: 1px solid lightgrey !important;
-
-    p {
-      color: #FFFFFFCC !important;
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
     }
 
     &:hover {
-      border: 1px solid #FFFFFFCC !important;
+      border: 1px solid #3DCFB6;
 
+      p {
+        color: #3DCFB6;
+        cursor: pointer;
+      }
+    }
+
+    &.disabled {
+      color: #FFFFFFCC !important;
+      border: 1px solid lightgrey !important;
+
+      p {
+        color: #FFFFFFCC !important;
+      }
+
+      &:hover {
+        border: 1px solid #FFFFFFCC !important;
+      }
     }
   }
 }

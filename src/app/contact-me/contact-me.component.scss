@@ -1,20 +1,20 @@
-@import '../shared/_mixins.scss';
+@use '../shared/mixins' as *;
 
 .contact-me-section {
-    @include section-padding();
-    @include d-flex($jus: space-evenly);
     width: 100%;
     margin-inline: auto;
     position: relative;
     z-index: 11;
     overflow-x: hidden;
     overflow-y: clip;
+    @include section-padding();
+    @include d-flex($jus: space-evenly);
 
 }
 
 .text-box {
-    @include d-flex($dir: column, $gap: 40px);
     width: 568px;
+    @include d-flex($dir: column, $gap: 40px);
 
 
     div:nth-child(1) {
@@ -40,8 +40,8 @@
         }
 
         div {
-            @include d-flex();
             flex-wrap: wrap;
+            @include d-flex();
 
             p:nth-child(2) {
                 font-weight: 700;

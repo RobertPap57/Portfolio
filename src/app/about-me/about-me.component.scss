@@ -1,13 +1,13 @@
-@import '../shared/_mixins.scss';
+@use '../shared/mixins' as *;
 
 .about-me-section {
-    @include section-padding();
-    @include d-flex($jus: space-evenly);
     height: 852px;
     width: 100%;
     margin-top: 72px;
     margin-inline: auto;
     padding-left: 16px;
+    @include section-padding();
+    @include d-flex($jus: space-evenly);
 }
 
 .my-photo-container {
@@ -51,12 +51,12 @@
     }
 
     .text-box {
-        @include text-box();
-        @include d-flex($dir: column, $gap: 40px);
         width: 100%;
         backdrop-filter: blur(4px);
         z-index: 10;
         position: relative;
+        @include text-box();
+        @include d-flex($dir: column, $gap: 40px);
 
 
         div {

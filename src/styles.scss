@@ -1,4 +1,4 @@
-@import 'app/shared/_mixins.scss';
+@use 'app/shared/mixins' as *;
 
 *,
 *::before,
@@ -110,11 +110,11 @@ h1 {
   }
 
   .text-container {
-    @include d-flex($dir: column);
     padding: 150px 96px 40px 96px;
     height: auto;
     max-width: 1920px;
     margin-inline: auto;
+    @include d-flex($dir: column);
 
     @media (max-width: 1300px) {
       padding-inline: 50px;

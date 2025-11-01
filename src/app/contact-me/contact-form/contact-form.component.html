@@ -5,7 +5,7 @@
       <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="userName" autocomplete="off"
       [ngClass]="{'input-invalid': name.invalid && name.touched}"
       [placeholder]="name.invalid && name.touched ? ('contactForm.name.required' | translate) : ('contactForm.name.placeholder' | translate)"
-      minlength="4" maxlength="40" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{4,50}$" required >
+      minlength="4" maxlength="40" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' \-]{4,50}$" required >
          @if (!name.valid && name.touched && name.value) {
           <span class="required-msg">{{ 'contactForm.name.nameInvalid' | translate }}</span>
           }

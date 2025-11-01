@@ -1,19 +1,20 @@
-@import '../../shared/_mixins.scss';
+@use '../../shared/mixins' as *;
 
 footer {
-    @include section-padding();
-    @include d-flex($dir: column, $al: center, $gap: 32px); 
     padding-inline: 96px;
     z-index: 10;
     width: 100%;
     position: relative;
     margin-inline: auto;
     padding-bottom: 64px;
+    @include section-padding();
+    @include d-flex($dir: column, $al: center, $gap: 32px);
 }
+
 .footer-container {
-    @include d-flex($jus: space-between, $al: center);
     width: 100%;
-    
+    @include d-flex($jus: space-between, $al: center);
+
 }
 
 .logo-container {
@@ -54,7 +55,6 @@ h1 {
 .socials-container {
     @include d-flex($dir: column, $gap: 8px);
 
-
     a {
         font-size: 16px;
         position: relative;
@@ -62,17 +62,17 @@ h1 {
         &:hover {
             color: #3DCFB6;
             cursor: pointer;
-            
+
             &::before {
-                content: ''; 
-                position: absolute; 
-                left: -10px; 
-                top: 50%; 
-                transform: translateY(-50%); 
+                content: '';
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                transform: translateY(-50%);
                 width: 5.4px;
-                height: 5.4px; 
-                background-color: #3DCFB6; 
-                border-radius: 50%; 
+                height: 5.4px;
+                background-color: #3DCFB6;
+                border-radius: 50%;
             }
         }
     }
@@ -97,14 +97,17 @@ h1 {
     footer {
         padding-bottom: 25px !important;
     }
+
     h1 {
         align-self: center;
         font-size: 18px;
         line-height: 20px;
     }
+
     .logo-container {
         img {
             height: 48px;
+
             &:hover {
                 height: 49px;
                 margin-left: -1px;
@@ -114,18 +117,21 @@ h1 {
 }
 
 @media (max-width: 320px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 32px;
-    .logo-container {
-        gap: 12px;
-        align-items: center;
-        div {
+    .footer-container {
+        flex-direction: column;
+        gap: 32px;
+
+        .logo-container {
+            gap: 12px;
+            align-items: center;
+
+            div {
+                align-items: center;
+            }
+        }
+
+        .socials-container {
             align-items: center;
         }
     }
-    .socials-container {
-        align-items: center;
-    }
-}
 }

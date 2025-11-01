@@ -1,4 +1,4 @@
-@import '../../shared/_mixins.scss';
+@use '../../shared/mixins' as *;
 
 @keyframes slideInMsg {
     0% {
@@ -31,8 +31,8 @@
 }
 
 .form-container {
-    @include d-flex($dir: column, $gap: 40px);
     width: 616px;
+    @include d-flex($dir: column, $gap: 40px);
 }
 
 .inputs-container {
@@ -40,11 +40,11 @@
     border-bottom: 1px solid #3DCFB6;
 
     div {
-        @include d-flex($dir: column, $gap: 16px);
         padding: 32px;
         width: 100%;
         border-top: 1px solid #3DCFB6;
         position: relative;
+        @include d-flex($dir: column, $gap: 16px);
     }
 }
 
@@ -160,8 +160,8 @@ input[type="checkbox"] {
 
 
 .action-container {
-    @include d-flex($dir: column, $gap: 16px);
     width: 100%;
+    @include d-flex($dir: column, $gap: 16px);
 
     .policy-agreement {
         @include d-flex($dir: column, $gap: 8px);
@@ -173,9 +173,9 @@ input[type="checkbox"] {
         }
 
         .checkbox-container {
-            @include d-flex($al: center, $gap: 8px);
             padding-block: 4px;
             width: 100%;
+            @include d-flex($al: center, $gap: 8px);
 
             p {
                 font-size: 15px;
@@ -195,8 +195,8 @@ input[type="checkbox"] {
 
 
     .button-container {
-        @include d-flex($al: center, $jus: center);
         width: 100%;
+        @include d-flex($al: center, $jus: center);
 
         button {
             background-color: transparent;
@@ -213,8 +213,6 @@ input[type="checkbox"] {
 }
 
 .email-sent {
-    @include text-box();
-    @include d-flex($dir: column, $jus: space-between, $gap: 16px);
     width: 400px;
     height: 180px;
     background-color: #26534B;
@@ -225,6 +223,8 @@ input[type="checkbox"] {
     right: 0;
     transform: translate(50%, 50%);
     animation: slideInMsg 5s ease-in-out forwards;
+    @include text-box();
+    @include d-flex($dir: column, $jus: space-between, $gap: 16px);
 
 
     div {

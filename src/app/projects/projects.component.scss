@@ -1,13 +1,13 @@
-@import '../shared/_mixins.scss';
+@use '../shared/mixins' as *;
 
 
 .projects-section {
-    @include section-padding();
-    @include d-flex($dir: column, $gap: 40px);
     width: 1248px;
     margin-inline: auto;
     z-index: 20;
     position: relative;
+    @include section-padding();
+    @include d-flex($dir: column, $gap: 40px);
 
     .title-container {
         @include d-flex($dir: column, $gap: 20px);
@@ -20,19 +20,19 @@
 
 
 .projects-container {
-    @include d-flex($dir: column);
     width: 880px;
     border-top: 1px solid #3DCFB6;
     margin-bottom: 16px;
     position: relative;
-
+    @include d-flex($dir: column);
+    
     .project {
-        @include d-flex($jus: space-between, $al: center);
         width: 100%;
         border-bottom: 1px solid #3DCFB6;
         padding: 40px 32px;
         cursor: pointer;
         transition: all 125ms ease-in-out;
+        @include d-flex($jus: space-between, $al: center);
 
         &:hover {
             background-color: #3DCFB64D;
