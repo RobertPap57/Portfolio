@@ -1,5 +1,5 @@
 import { Component, inject, Signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
@@ -12,13 +12,12 @@ import { CursorShadowComponent } from './shared/cursor-shadow/cursor-shadow.comp
 @Component({
     selector: 'app-root',
     imports: [
-        CommonModule,
-        RouterOutlet,
-        TranslateModule,
-        FooterComponent,
-        HeaderComponent,
-        CursorShadowComponent
-    ],
+    RouterOutlet,
+    TranslateModule,
+    FooterComponent,
+    HeaderComponent,
+    CursorShadowComponent
+],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

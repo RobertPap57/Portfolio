@@ -1,31 +1,35 @@
 <header>
-    <div class="header-container">
-        <nav class="nav-mobile" [class.active]="menuOpen">
-            <label class="switch">
-                <div class="options">
-                    <p [class.selected]="toggleState === false">EN</p>
-                    <p [class.selected]="toggleState === true">DE</p>
-                </div>
-                <input type="checkbox" [(ngModel)]="toggleState" (change)="switchLanguage(toggleState ? 'de' : 'en')">
-                <span class="slider"></span>
-            </label>
-            <div class="links-wrapper">
-                <a (click)="selectLink(i)" [class.link-selected]="activeLink === i + 1"
-                    *ngFor="let link of navLinks; let i = index" [href]="'#' + linkIds[i]">{{link}}
-                    <span></span>
-                </a>  
-            </div>
-        </nav>
-    
-        <a routerLink="" class="logo-container">
-            <img src="" alt="">
-        </a>
-
-        <div class="burger-menu hide-desktop" [class.active]="menuOpen" (click)="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+  <div class="header-container">
+    <nav class="nav-mobile" [class.active]="menuOpen">
+      <label class="switch">
+        <div class="options">
+          <p [class.selected]="toggleState === false">EN</p>
+          <p [class.selected]="toggleState === true">DE</p>
         </div>
+        <input type="checkbox" [(ngModel)]="toggleState" (change)="switchLanguage(toggleState ? 'de' : 'en')">
+        <span class="slider"></span>
+      </label>
+      <div class="links-wrapper">
+        @for (link of navLinks; track link; let i = $index) {
+          <a (click)="selectLink(i)" [class.link-selected]="activeLink === i + 1"
+            [href]="'#' + linkIds[i]">{{link}}
+            <span></span>
+          </a>
+        }
+      </div>
+    </nav>
+
+    <a routerLink="" class="logo-container">
+      <img src="" alt="">
+    </a>
+
+    <div class="burger-menu hide-desktop" [class.active]="menuOpen" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="layout" *ngIf="menuOpen" (click)="closeMenu()" [class.active]="menuOpen"></div>
+  </div>
+  @if (menuOpen) {
+    <div class="layout" (click)="closeMenu()" [class.active]="menuOpen"></div>
+  }
 </header>

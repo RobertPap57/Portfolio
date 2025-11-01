@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, HostListener } from '@angular/core';
 
 
 @Component({
     selector: 'app-cursor-shadow',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './cursor-shadow.component.html',
     styleUrl: './cursor-shadow.component.scss'
 })

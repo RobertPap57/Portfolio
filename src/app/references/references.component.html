@@ -1,25 +1,29 @@
 <div class="references-section">
-    <div class="title-container">
-        <h1>{{'references.title' | translate}}</h1>
-        <img class="quotes hide-mobile" src="../assets/images/references/quotes.svg">
-    </div>
-    <div class="swiper-container">
-        <img class="quotes hide-desktop" src="../assets/images/references/quotes.svg">
-        <div *ngFor="let reference of referencesList; let i = index" class="card" 
+  <div class="title-container">
+    <h1>{{'references.title' | translate}}</h1>
+    <img class="quotes hide-mobile" src="../assets/images/references/quotes.svg">
+  </div>
+  <div class="swiper-container">
+    <img class="quotes hide-desktop" src="../assets/images/references/quotes.svg">
+    @for (reference of referencesList; track reference; let i = $index) {
+      <div class="card"
         [class.active]="i === activeCardIndex"
         [class.left]="i === (activeCardIndex - 1 + referencesList.length) % referencesList.length"
         [class.right]="i === (activeCardIndex + 1) % referencesList.length">
         <p class="text">{{reference.content | translate}}</p>
         <div>
-            <span></span>
-            <p>{{reference.name | translate}}</p>
+          <span></span>
+          <p>{{reference.name | translate}}</p>
         </div>
-    </div>
+      </div>
+    }
     <div class="overlay hide-mobile"></div>
-    </div>
-    <div class="swiper-btns">
-        <img (click)="swipeRight()" src="../assets/images/references/left.svg" alt="">
-        <span *ngFor="let reference of referencesList; let i = index" [class.active]="i === activeCardIndex"></span>
-        <img (click)="swipeLeft()" src="../assets/images/references/right.svg" alt="">
-    </div>
+  </div>
+  <div class="swiper-btns">
+    <img (click)="swipeRight()" src="../assets/images/references/left.svg" alt="">
+    @for (reference of referencesList; track reference; let i = $index) {
+      <span [class.active]="i === activeCardIndex"></span>
+    }
+    <img (click)="swipeLeft()" src="../assets/images/references/right.svg" alt="">
+  </div>
 </div>

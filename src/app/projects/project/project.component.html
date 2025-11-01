@@ -1,56 +1,63 @@
-<div *ngIf="project" class="overlay" (click)="closeProject()">
+@if (project) {
+  <div class="overlay" (click)="closeProject()">
     <div class="project-container" #projectContainer (click)="$event.stopPropagation()">
-        <div class="close-btn" (click)="closeProject()">
-            <img src="../../assets/images/projects/close.svg" alt="">
+      <div class="close-btn" (click)="closeProject()">
+        <img src="../../assets/images/projects/close.svg" alt="">
+      </div>
+      <img class="project-img" src="../../assets/images/projects/{{project.imageBig}}" alt="">
+      <div class="content">
+        <div class="title">
+          @if (projectIndex() !== null) {
+            <h2>0{{ (projectIndex()! + 1).toString() }}</h2>
+          }
+          <h1>{{project.title}}</h1>
         </div>
-        <img class="project-img" src="../../assets/images/projects/{{project.imageBig}}" alt="">
-        <div class="content">
-            <div class="title">
-                <h2 *ngIf="projectIndex() !== null">0{{ (projectIndex()! + 1).toString() }}</h2>
-                <h1>{{project.title}}</h1>
-            </div>
-            <div class="description">
-                <div>
-                    <h1>{{'projects.question' | translate}}</h1>
-                    <p>{{translatedDescription}}</p>
-                </div>
-                <div class="technologies">
-                    <div *ngFor="let tech of project.technologies">
-                        <img src="../../assets/images/projects/{{tech}}.svg" alt="">
-                        <p>{{tech}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="buttons">
-                <div class="button-wrapper">
-                    <a [href]="project.githubLink || null" [class.disabled]="!project.githubLink" target="_blank"
-                    rel="noopener noreferrer">
-                    <p>GitHub</p>
-                    <span>
-                        <img src="../../assets/images/projects/arrow_outward_blue.svg" alt="">
-                    </span>
-                </a>
-            </div>
-            <div class="button-wrapper">
-                    <a [href]="project.testLink || null" [class.disabled]="!project.testLink" target="_blank"
-                    rel="noopener noreferrer">
-                    <p>Live Test</p>
-                    <span>
-                        <img src="../../assets/images/projects/arrow_outward_blue.svg" alt="">
-                    </span>
-                </a>
-            </div>
-            <div class="project-in-work" *ngIf="!project.testLink">
-                <img class="pointer" src="../assets/images/skills/tooltip_pointer.svg" alt="">
-                <img class="in-work-img" src="../assets/images/projects/project_in_work.png" alt="">
-                <p>{{'projects.projectInWork' | translate}}</p>
-            </div>
+        <div class="description">
+          <div>
+            <h1>{{'projects.question' | translate}}</h1>
+            <p>{{translatedDescription}}</p>
+          </div>
+          <div class="technologies">
+            @for (tech of project.technologies; track tech) {
+              <div>
+                <img src="../../assets/images/projects/{{tech}}.svg" alt="">
+                <p>{{tech}}</p>
+              </div>
+            }
+          </div>
         </div>
-    </div>
-    <div class="next-project" (click)="nextProject()">
+        <div class="buttons">
+          <div class="button-wrapper">
+            <a [href]="project.githubLink || null" [class.disabled]="!project.githubLink" target="_blank"
+              rel="noopener noreferrer">
+              <p>GitHub</p>
+              <span>
+                <img src="../../assets/images/projects/arrow_outward_blue.svg" alt="">
+              </span>
+            </a>
+          </div>
+          <div class="button-wrapper">
+            <a [href]="project.testLink || null" [class.disabled]="!project.testLink" target="_blank"
+              rel="noopener noreferrer">
+              <p>Live Test</p>
+              <span>
+                <img src="../../assets/images/projects/arrow_outward_blue.svg" alt="">
+              </span>
+            </a>
+          </div>
+          @if (!project.testLink) {
+            <div class="project-in-work">
+              <img class="pointer" src="../assets/images/skills/tooltip_pointer.svg" alt="">
+              <img class="in-work-img" src="../assets/images/projects/project_in_work.png" alt="">
+              <p>{{'projects.projectInWork' | translate}}</p>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="next-project" (click)="nextProject()">
         <p>{{'projects.button' | translate}}</p>
         <img src="../../assets/images/projects/arrow_forward.svg" alt="">
+      </div>
     </div>
-    
-</div>
-</div>
+  </div>
+}

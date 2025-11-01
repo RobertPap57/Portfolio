@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
     selector: 'app-references',
-    imports: [CommonModule, TranslateModule],
+    imports: [TranslateModule],
     templateUrl: './references.component.html',
     styleUrl: './references.component.scss'
 })

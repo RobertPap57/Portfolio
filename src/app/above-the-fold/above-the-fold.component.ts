@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { AnimatedButtonComponent } from '../shared/animated-button/animated-button.component';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from "@ngx-translate/core";
 
 @Component({
     selector: 'app-above-the-fold',
-    imports: [TranslateModule, AnimatedButtonComponent, CommonModule],
+    imports: [TranslateModule, AnimatedButtonComponent],
     templateUrl: './above-the-fold.component.html',
     styleUrl: './above-the-fold.component.scss'
 })

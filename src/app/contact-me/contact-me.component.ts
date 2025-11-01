@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 
@@ -7,7 +7,7 @@ import { ContactFormComponent } from "./contact-form/contact-form.component";
 
 @Component({
     selector: 'app-contact-me',
-    imports: [CommonModule, TranslateModule, ContactFormComponent],
+    imports: [TranslateModule, ContactFormComponent],
     templateUrl: './contact-me.component.html',
     styleUrl: './contact-me.component.scss'
 })

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { AnimatedButtonComponent } from '../shared/animated-button/animated-button.component';
@@ -6,7 +6,7 @@ import { AnimatedButtonComponent } from '../shared/animated-button/animated-butt
 
 @Component({
     selector: 'app-skills',
-    imports: [TranslateModule, CommonModule, AnimatedButtonComponent],
+    imports: [TranslateModule, AnimatedButtonComponent],
     templateUrl: './skills.component.html',
     styleUrl: './skills.component.scss'
 })

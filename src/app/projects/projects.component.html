@@ -1,31 +1,41 @@
 <div class="projects-section" id="projects">
-    <div class="title-container">
-        <h2>Portfolio</h2>
-        <h1>{{'projects.title' | translate}}</h1>
-    </div>
+  <div class="title-container">
+    <h2>Portfolio</h2>
+    <h1>{{'projects.title' | translate}}</h1>
+  </div>
 
-    <p class="intro-line">{{'projects.introLine' | translate}}</p>
+  <p class="intro-line">{{'projects.introLine' | translate}}</p>
 
-    <div class="projects-container">
-        <div class="project" *ngFor="let project of projects; let i = index" (mouseover)="setHoveredProject(project)"
-            (mouseleave)="setHoveredProject(null)" (click)="openProject(i)">
-            <h3>{{project.title}}
-                <img src="../assets/images/projects/arrow_outward.svg" alt="">
-            </h3>
-            <div class="technologies">
-                <div *ngFor="let tech of project.technologies; let last = last">
-                    <p>{{tech}}</p>
-                    <div *ngIf="!last" class="line">|</div>
-                </div>
+  <div class="projects-container">
+    @for (project of projects; track project; let i = $index) {
+      <div class="project" (mouseover)="setHoveredProject(project)"
+        (mouseleave)="setHoveredProject(null)" (click)="openProject(i)">
+        <h3>{{project.title}}
+          <img src="../assets/images/projects/arrow_outward.svg" alt="">
+        </h3>
+        <div class="technologies">
+          @for (tech of project.technologies; track tech; let last = $last) {
+            <div>
+              <p>{{tech}}</p>
+              @if (!last) {
+                <div class="line">|</div>
+              }
             </div>
+          }
         </div>
-        <div *ngFor="let project of projects" [ngStyle]="project.imgPosition"
-            [class.active]="hoveredProject === project" class="images">
-            <img class="background-img" src="../assets/images/projects/project_background.svg" alt="">
-            <img src="../assets/images/projects/{{project.image}}" alt="">
-        </div>
-        <app-project *ngIf="projectIndex !== null"></app-project>
-    </div>
+      </div>
+    }
+    @for (project of projects; track project) {
+      <div [ngStyle]="project.imgPosition"
+        [class.active]="hoveredProject === project" class="images">
+        <img class="background-img" src="../assets/images/projects/project_background.svg" alt="">
+        <img src="../assets/images/projects/{{project.image}}" alt="">
+      </div>
+    }
+    @if (projectIndex !== null) {
+      <app-project></app-project>
+    }
+  </div>
 
 
 </div>
